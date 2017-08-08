@@ -1,0 +1,19 @@
+extends ../_partials/_template
+
+include ../_mixins/_detail-header
+
+include ../_mixins/_nav
+
+include ../_mixins/_detail-page
+
+block content
+  
+  .c-content.history
+  
+    //+nav-desktop('news')
+    //+nav-mobile
+
+    +detail-header('news')
+    
+    .c-content__right
+      +detail-news

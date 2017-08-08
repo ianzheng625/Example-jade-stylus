@@ -1,0 +1,39 @@
+.button--learn-more
+  text-decoration none
+  text-transform uppercase
+  display inline-block
+  color white
+  background-color black
+  padding 10px
+  text-align left
+  transition all .3s
+  font-family $font-kh-68
+  font-size 24px
+  line-height 18px
+  span 
+    line-height 18px
+    display block
+    font-family $font-kh-26
+  &:hover
+    color black
+    background-color $col-gold
+    text-decoration none
+
+
+@media $small
+  .button--learn-more
+    background-color $col-gold
+    color black
+    &:hover
+      color white
+      background-color black
+
+
+html:lang(zh-CN)
+  .button--learn-more
+    font-family $font-zh
+    font-size 18px
+    line-height 1.1em
+    span
+      font-family $font-zh
+      line-height 1.1em

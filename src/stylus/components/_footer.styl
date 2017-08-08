@@ -1,0 +1,127 @@
+.c-footer
+  border-top #cacaca solid 1px
+  padding-bottom 30px 
+  margin 0
+  width calc(100% - 125px)
+  margin-left 125px
+  p
+    line-height 1.5em
+  & > div
+    width 100%
+    text-align center
+    margin-top 1em
+  &__logo
+    display block
+    margin 0 auto
+    position relative
+    top -35px
+    max-width 150px
+    margin-bottom 75px
+    img
+      width 100%
+      display block
+      position absolute
+      z-index 1
+    &--white
+      width 80%
+      margin-left -40%
+      position absolute
+      top 20px
+      left 50%
+      background-color white
+      height 30px
+  &__add-tel
+    p,
+    a
+      color black
+      margin 10px 20px 0
+      font-size 20px
+      letter-spacing .5px
+      font-family $font-kh-27
+      display inline-block
+      text-transform uppercase
+      span
+        padding-right 5px
+        font-size 18px
+    .top-line
+      hr
+        width 20px
+        border 1px solid black
+        margin 25px auto 15px
+    .c-footer__telephone
+      .icon-phone
+        display inline-block
+        width 18px
+    .c-footer__email
+      p
+        display inline-block
+        margin 0
+      &:hover
+        text-decoration none
+        color $col-gold
+        p
+          color $col-gold
+          text-decoration underline
+  &__warn
+    font-size 13px
+    color #cacaca
+    p
+      letter-spacing .5px
+  &__icp
+    font-size 13px
+    color #cacaca
+    p
+      letter-spacing .5px
+      display inline-block
+    > a
+      color #cacaca
+      display inline-block
+      margin 0 20px
+      text-decoration none
+      text-transform uppercase
+      &:hover
+        color $col-gold
+        text-decoration underline
+@media $small 
+  .c-footer
+    width 100%
+    margin-left 0
+    &__icp
+      > a
+        margin 10px 20px 
+    &__add-tel
+      p
+        display block 
+    > .c-footer__warn
+      width 85%
+      margin 1em auto 0
+    
+
+html:lang(zh-CN)
+  .c-footer
+    &__add-tel
+      p
+        font-family $font-zh
+        font-size 16px
+        letter-spacing 0
+        span
+          font-size 16px
+      .c-footer__telephone
+        font-family $font-kh-27
+        font-size 20px
+      .c-footer__email
+        p
+          font-size 20px
+          letter-spacing .5px
+          font-family $font-kh-27
+    &__warn
+      p
+        font-family $font-zh
+        letter-spacing 0
+        font-size 14px
+    &__icp
+      a
+        font-size 14px
+        
+      
+

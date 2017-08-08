@@ -1,0 +1,426 @@
+.c-join
+  margin-top 125px
+  clearfix()
+  &__title
+    width 20%
+    float left
+    .top-line
+      clearfix()
+      hr
+        margin-top 0
+        margin-bottom 0
+        float left
+        width 30px
+        border 1px solid black
+    h2
+      color black
+      font-family $font-kh-68
+      font-size 72px
+      line-height 1.5em
+      text-align left
+      text-transform uppercase
+      margin-top 0
+      margin-bottom 0
+  &__form
+    clearfix()
+    width 65%
+    float left
+    background-color black
+    padding 10px 10px 30px
+    position relative
+    box-sizing border-box !important
+    form
+      clearfix()
+    *
+      box-sizing border-box !important
+    &--img
+      width 100%
+      clearfix()
+      .form-field
+        width 125px
+        height 125px
+        float left
+        background-image url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAACPCAIAAACeURWcAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCQUVDM0RGREEzRUQxMUU2QjQ2QkJBRDhFMzA0NjlDNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCQUVDM0RGRUEzRUQxMUU2QjQ2QkJBRDhFMzA0NjlDNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkJBRUMzREZCQTNFRDExRTZCNDZCQkFEOEUzMDQ2OUM2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkJBRUMzREZDQTNFRDExRTZCNDZCQkFEOEUzMDQ2OUM2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+CLyqHgAACd5JREFUeNrsnWtX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")
+        background-size cover
+        background-repeat no-repeat
+        background-position 50%
+      .c-join__form--update
+        p
+          padding-left 3px
+          position absolute
+          bottom 0
+          left 0
+          display block
+          width 100%
+          font-family $font-kh-26
+          color black
+          padding-left 22px
+          padding-top 0px
+          line-height 23px 
+          font-size 22px
+          text-align left
+          background-image url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAUCAYAAABSx2cSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2ODlDMjQzMEE0MEYxMUU2QjQ2QkJBRDhFMzA0NjlDNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2ODlDMjQzMUE0MEYxMUU2QjQ2QkJBRDhFMzA0NjlDNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY4OUMyNDJFQTQwRjExRTZCNDZCQkFEOEUzMDQ2OUM2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY4OUMyNDJGQTQwRjExRTZCNDZCQkFEOEUzMDQ2OUM2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+HTV7xwAAAVlJREFUeNpi+P//PwMu3N3dvfDjx4/y6OJfv34F0zg1Tpo0aQYDUDoqKuo4SZpnzZo1AaQRhtPS0vYSpXnz5s3lyBphuLW1dSFezSdOnIjHphGGlyxZ0o5V882bNz0ZGRn/49MMwiCXoWh+/fq1OiFNyPjYsWOhYM1PnjxxJkYDuquOHz+ewcTMzMx46NChghs3bkQ8e/YssLKycg0DFuDg4HDl4cOHIXfu3Ak/cuRImoCAwGeM0J45c2Y2NpsDAwM3wtR8+fIFTDOh2wC0XRSbzZ8+feKGsYFeANNMDGQALi4u8jXDAIbmf//+YTUQmziGADAX8WPT/PLlS3F0MUZwZCOBz58/63z48EEfGCh/QHyoPDPQn8+EhYUP4NVMCmC5cuWKGdBJvKRq5OPj+8FgYGDwnZR0DcNCQkL/WaytrU++evXKgJWV9S+xtv79+5fJ0NDwEUCAAQB7NXcMcekivQAAAABJRU5ErkJggg==")
+          background-repeat no-repeat
+          background-size 14px
+          background-position 3px 1px
+        input
+          padding 0 !important
+          height 100% !important
+        .error-text
+          width 100%
+          text-align left
+          left 0
+          top 100%
+          p
+            background-image none
+            font-family Arial, sans-serif
+            font-size 12px
+            line-height 1.5em
+            padding-left 0
+            position static
+    &--half
+      width 100%
+      padding-right 100px
+      clearfix()
+      .form-field
+        width calc(50% - 20px)
+        float left
+        +ie(9)
+          width 46%
+    &--full
+      width 100%
+      padding-right 100px
+      clearfix()
+      .form-field
+        width calc(100% - 20px)
+        float left
+      .c-join__form--update
+        p
+          display block
+          width 100%
+          font-family $font-kh-27
+          color white
+          padding-left 35px
+          padding-top 3px
+          line-height 35px 
+          font-size 30px
+          text-align left
+          background-color #373737
+          background-image url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAARCAYAAADtyJ2fAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2ODlDMjQyQ0E0MEYxMUU2QjQ2QkJBRDhFMzA0NjlDNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2ODlDMjQyREE0MEYxMUU2QjQ2QkJBRDhFMzA0NjlDNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkJBRUMzREZGQTNFRDExRTZCNDZCQkFEOEUzMDQ2OUM2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkJBRUMzRTAwQTNFRDExRTZCNDZCQkFEOEUzMDQ2OUM2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Rj32mQAAAU9JREFUeNpiVFBQYMAGMjIyyqWlpeVra2uzsMkzCwgIYAh6enqGtLe3z9LT0zNlBIITJ04cIKjR29s7bOrUqatgfAsLCwdsmlE0enh4BE2bNm01uukgzT9//vxx5syZoxgaHRwcPGfPnr2JAQewsbFx+fbt25dz584dBwuAAic3NzfiP5Fg0qRJTeAATU5O9oUJ/gMCYjS3tLQUMQL9pQfifPr06QMoEJYtW7ZPXl5eGdmZQCd+DQwMNAeq+cjFxcXNw8PDx3Ljxo1LyIqAgfAd3X9Ah/y9devWVWQxJoz4YWZmQRcDuYSbm5sXr0ZiAYZGdJNhYiBb8Wr8+vXrZ2xioABEcT56ImdlZWUDAnZQ7ED9xwQKnO/fv39DVscCCl6QJLLpv3///oVuK1AdD8y5YNtv37597T+J4M2bNy9ZYE74CwREhSYQgBIEQIABAMTiFfDM6q6+AAAAAElFTkSuQmCC")
+          background-repeat no-repeat
+          background-size 18px
+          background-position 10px 10px
+          word-break break-word
+        input
+          padding 0 !important
+          height 100% !important
+          z-index 3
+        .file-path
+          display none
+      > p
+        text-align left
+        font-size 14px
+        color white
+        display inline-block
+        width 100%
+        padding 10px 0 15px 10px
+    &--update
+      position relative
+      cursor pointer
+      input
+        position absolute
+        top 0
+        left 0
+        opacity 0
+        cursor pointer
+      p
+        width 100%
+        
+        
+    .form-field
+      background-color black
+      margin 17.5px 10px
+      position relative
+      input
+        width 100%
+        height 36px
+        border none
+        background-color #373737
+        font-family $font-kh-27
+        padding-left 10px
+        padding-top 3px
+        font-size 30px
+        color white
+      textarea
+        resize none
+        display block
+        width 100%
+        background-color #373737
+        font-family $font-kh-27
+        padding-left 3px
+        border none
+        min-height 150px
+        padding-left 10px
+        padding-top 3px
+        font-size 30px
+        color white
+        line-height 35px
+      &.n-invalid
+        border solid 1px #f00
+        .error-text
+          display block  
+    
+    .error-text
+      display none  
+      position absolute
+      top 100%
+      p
+        text-align left
+        color #f00
+        font-size 12px
+        &.error-zh
+          display none
+      
+  &__img
+    position absolute
+    bottom 0
+    right -227px
+    width 52%
+    min-width 345px
+    img
+      width 100%
+      display block
+  
+  &__submit
+    background-color white
+    border none
+    padding 5px
+    line-height 1em
+    font-size 30px
+    font-family $font-kh-27
+    color black
+    float left
+    margin-left 10px
+    transition all 1s
+    cursor pointer
+    border-radius 0
+    -webkit-appearance none
+    &:hover
+      background-color $col-gold
+      color white
+      text-decoration none
+  
+@media $medium
+  .c-join
+    margin-top 150px
+@media $small
+  .c-join
+    margin-top 0
+    &__title
+      width 100%
+      float none
+      margin-bottom 40px
+      h2
+        font-size 36px
+        text-align center
+      .top-line
+        hr
+          float none
+          margin 0 auto
+    &__form
+      width 100%
+      float none
+      padding 10px 30px 30px
+      &--img
+        margin auto
+        width 270px
+      &--half
+        padding-right 0
+        width 100%
+        .form-field
+          width calc(50% - 10px)
+        &:nth-child(4)
+          .form-field
+            width calc(100% - 10px)
+      &--full
+        padding 0
+        width 100%
+        .form-field
+          width calc(100% - 10px)
+        .c-join__form--update
+          p
+            font-size 26px
+      .form-field
+        margin 17.5px 5px
+    &__img
+      display none
+    &__submit
+      float none
+      
+@media (min-width: 925px) and (max-width: 1167px)
+  .c-join
+    &__title
+      width 210px
+    &__form
+      width calc(100% - 210px)
+      &--half
+        padding-right 0
+      &--full
+        padding-right 0
+    &__img
+      display none
+@media (min-width: 751px) and (max-width: 924px)
+  .c-join
+    &__title
+      width 100%
+      padding-left 15px
+      margin-bottom 20px
+    &__form
+      width 100%
+      &--half
+        padding-right 0
+      &--full
+        padding-right 0
+    &__img
+      display none
+      
+@media (max-width: 330px)
+  .c-join__form
+    padding 10px
+
+html.ios.mobile
+  .c-join__form--full
+    .c-join__form--update
+      display none
+
+html:lang(zh-CN)
+  .c-join
+    &__title
+      h2
+        font-size 48px
+        font-family $font-zh
+        line-height 1em
+        padding 15px 0
+      
+    &__form
+      .form-field
+        input
+          font-size 20px
+          font-family $font-zh
+          line-height 36px
+          padding 0
+          padding-left 10px
+        textarea
+          font-size 20px
+          font-family $font-zh
+      .error-text
+        display none  
+        p
+          &.error-en
+            display none
+          &.error-zh
+            display block
+      &--full
+        .c-join__form--update
+          p
+            font-size 20px
+            font-family $font-zh
+      &--img
+        .c-join__form--update
+          p
+            font-size 11px
+            font-family $font-zh
+            background-size 9px
+            background-position 4px 4px
+            
+    &__submit
+      font-size 20px
+      font-family $font-zh
+      line-height 25px
+      padding 5px 10px
+      font-weight bold
+
+@media $small
+  html:lang(zh-CN)
+    .c-join
+      &__title
+        h2
+          font-size 36px
+
+@css{
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: white;
+    font-size: 30px;
+    font-family: 'Knockout-HTF27', Arial, sans-serif;
+    line-height: 35px;
+  }
+  input:-moz-placeholder, textarea:-moz-placeholder {
+    color: white;
+    font-size: 30px;
+    font-family: 'Knockout-HTF27', Arial, sans-serif;
+    line-height: 35px;
+  }
+  input::-moz-placeholder, textarea::-moz-placeholder {
+    color: white;
+    font-size: 30px;
+    font-family: 'Knockout-HTF27', Arial, sans-serif;
+    line-height: 35px;
+  }
+  input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: white;
+    font-size: 30px;
+    font-family: 'Knockout-HTF27', Arial, sans-serif;
+    line-height: 35px;
+  }
+  @media (max-width: 750px) {
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+      font-size: 26px;
+    }
+    input:-moz-placeholder, textarea:-moz-placeholder {
+      font-size: 26px;
+    }
+    input::-moz-placeholder, textarea::-moz-placeholder {
+      font-size: 26px;
+    }
+    input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+      font-size: 26px;
+    }
+  }
+  html:lang(zh-CN) input::-webkit-input-placeholder, html:lang(zh-CN) textarea::-webkit-input-placeholder {
+    font-size: 20px;
+    font-family: 'SimHei', Arial, sans-serif;
+    line-height: 35px;
+  }
+  html:lang(zh-CN) input:-moz-placeholder, html:lang(zh-CN) textarea:-moz-placeholder {
+    font-size: 20px;
+    font-family: 'SimHei', Arial, sans-serif;
+    line-height: 35px;
+  }
+  html:lang(zh-CN) input::-moz-placeholder, html:lang(zh-CN) textarea::-moz-placeholder {
+    font-size: 20px;
+    font-family: 'SimHei', Arial, sans-serif;
+    line-height: 35px;
+  }
+  html:lang(zh-CN) input:-ms-input-placeholder, html:lang(zh-CN) textarea:-ms-input-placeholder {
+    font-size: 20px;
+    font-family: 'SimHei', Arial, sans-serif;
+    line-height: 35px;
+  }
+  @media (max-width: 750px) {
+    html:lang(zh-CN) input::-webkit-input-placeholder, html:lang(zh-CN) textarea::-webkit-input-placeholder {
+      font-size: 18px;
+    }
+    html:lang(zh-CN) input:-moz-placeholder, html:lang(zh-CN) textarea:-moz-placeholder {
+      font-size: 18px;
+    }
+    html:lang(zh-CN) input::-moz-placeholder, html:lang(zh-CN) textarea::-moz-placeholder {
+      font-size: 18px;
+    }
+    html:lang(zh-CN) input:-ms-input-placeholder, html:lang(zh-CN) textarea:-ms-input-placeholder {
+      font-size: 18px;
+    }
+  }
+}
+
+
+

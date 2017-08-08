@@ -1,0 +1,196 @@
+.c-events
+  max-width 1024px
+  margin 0 auto
+  padding 3em 0 7em
+  overflow hidden
+  &__text
+    display block
+    width 31%
+    margin 0 auto
+    text-align left
+    .top-line
+      clearfix()
+      hr
+        margin-top 0
+        margin-bottom 0
+        float left
+        width 20px
+        border 1px solid black
+    h2
+      color black
+      line-height 1em
+      font-family $font-kh-68
+      font-size 88px
+      text-transform uppercase
+      padding 5px 0 0
+      margin-top 0
+      margin-bottom 0
+    h3
+      color black
+      font-family $font-bc
+      font-size 32px
+      line-height 1em
+      text-transform uppercase
+      font-style italic
+      padding 15px 0 0
+      margin-top 0
+      margin-bottom 0
+  
+  &__block
+    width 31%
+    float left
+    background-color black
+    overflow hidden
+    img
+      width 100% 
+      display block
+    &--1
+      position relative
+      bottom -175px
+    &--2
+      position relative
+      margin 0 3.5%
+      bottom -300px
+    &--3
+      position relative
+      bottom -220px
+    
+    &:hover
+      .bg--shadow
+        opacity 0
+        z-index -1
+      // img
+      //   transform scale(1.1,1.1)
+    img,
+    .bg--shadow
+      transition top 1s ease, opacity 1s ease, z-index 1s ease, transform ease 1s  
+        
+  &__blocks
+    &.active
+      .c-events__block--1
+        bottom 250px
+        transition all 1s 
+      .c-events__block--2
+        bottom 0
+        transition all 1s 
+        transition-delay .5s
+      .c-events__block--3
+        bottom 180px
+        transition all 1s 
+        transition-delay 1s
+
+  .button--learn-more
+    margin 10px 0
+  &__mobile
+    display none
+    
+@media $medium
+  .c-events
+    &__text
+      h2
+        font-size 72px
+        padding 5px
+      h3
+        font-size 24px
+@media $small
+  .c-events
+    padding 3em 0 3.5em
+    &__text
+      width 80%
+      text-align center
+      .top-line
+        hr
+          float none
+          margin 0 auto
+      h2
+        font-size 60px
+      h3
+        font-size 20px
+        
+    &__mobile
+      display block
+    &__blocks
+      display none
+    &__block
+      float none
+      width 60%
+      display block
+      margin 2em auto
+      position relative
+    .owl
+      &-pagination
+        display none
+      &-prev
+        position absolute
+        top 45%
+        left 5%
+        line-height 18px
+        &:before
+          content "\e900"
+          font-size 30px
+          position relative
+          top 10px
+          left -3px
+          color black
+      &-next
+        position absolute
+        top 45%
+        right 5%
+        line-height 18px
+        &:before
+          content "\e905"
+          font-size 30px
+          position relative
+          top 10px
+          left -3px
+          color black
+      &-theme
+        .owl-controls
+          .owl-buttons
+            div
+              background-color $col-gold
+              width 38px
+              height 38px
+              border-radius 0
+              opacity 1
+              padding 0
+              overflow hidden
+              font-family 'icomoon' !important
+              
+
+html:lang(zh-CN)
+  .c-events
+    &__text
+      h2
+        font-weight bold
+        line-height 1em
+        font-family $font-zh
+        font-size 60px
+        padding 15px 0
+      h3
+        font-family $font-zh
+        font-size 28px
+    &__blocks
+      &.active
+        .c-events__block--1
+          bottom 150px
+        .c-events__block--3
+          bottom 100px
+        
+@media $medium
+  html:lang(zh-CN)
+    .c-events
+      &__text
+        h2
+          font-size 54px
+        h3
+          font-size 24px
+@media $small
+  html:lang(zh-CN)
+    .c-events
+      &__text
+        h2
+          font-size 40px
+        h3
+          font-size 20px
+

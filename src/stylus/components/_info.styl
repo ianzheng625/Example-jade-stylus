@@ -1,0 +1,160 @@
+.c-info
+  &__detail
+    max-width 1024px
+    margin 0 auto 50px
+    background-color black
+    clearfix()
+    &--img
+      overflow hidden
+      width 40%
+      position relative
+      display table-cell
+      vertical-align middle
+      img
+        min-width 100%
+        display block
+    &--text
+      width 60%
+      padding 30px 0
+      display table-cell
+      vertical-align middle
+      h3
+        line-height 1em
+        text-transform uppercase
+        font-family $font-kh-27
+        color #cacaca
+        font-size 48px
+        padding 0 20px
+        margin-top 0
+        margin-bottom 0
+      .c-info__detail--contact
+        a
+          font-size 22px
+          font-family $font-kh-27
+          margin 0 25px
+          p
+            margin 0
+          &:hover
+            color $col-gold
+            p
+              color $col-gold
+              text-decoration underline
+    &--opentimes
+      text-align center
+      margin 20px auto
+    &--opentime
+      display inline-block
+      margin-right 10px
+      margin-left 10px
+      margin-bottom 5px
+      p
+        margin 0
+        font-size 24px
+        text-transform uppercase
+        font-family $font-kh-68
+        display block
+        color $col-gold
+        text-align left
+        margin-bottom 0
+      p:last-child
+        font-family $font-kh-26
+        font-size 28px
+        span
+          font-size 24px
+    &--contact
+      p
+        color white
+        display inline-block
+        margin 0 25px
+      a
+        color white
+        display inline-block
+        &:hover
+          text-decoration none
+      span
+        position relative
+        top 2px
+        font-size 18px
+
+@media $medium
+  .c-info
+    &__detail     
+      &--img
+        float left
+        display block
+        vertical-align initial
+      &--text
+        float left
+        display block
+        vertical-align initial
+      &--contact
+        p
+          margin 0 10px
+        a
+          margin 0 10px
+@media $small
+  .c-info
+    &__detail
+      &--img
+        width 100%
+        float none
+        display block
+        vertical-align initial
+      &--text
+        width 100%
+        float none
+        display block
+        vertical-align initial
+      &--contact
+        p
+          margin 0 0 10px 
+        a
+          margin 0 
+
+html:lang(zh-CN)
+  .c-info
+    &__detail
+      &--text
+        h3
+          font-family $font-zh
+          font-size 36px
+          padding 15px 20px
+        .c-info__detail--contact
+          a
+            font-family $font-kh-27
+            p
+              font-family $font-kh-27
+      &--opentime
+        p
+          font-size 20px
+          font-family $font-zh
+        p:last-child
+          font-family $font-zh
+          font-size 16px
+          span
+            font-size 24px
+            position relative
+            top 5px
+            left -3px
+            display inline-block
+            width 32px
+
+@media $medium
+  html:lang(zh-CN)
+    .c-info
+      &__detail
+        &--text
+          h3
+            padding 0 20px
+        
+
+@media $small
+  html:lang(zh-CN)
+    .c-info
+      &__detail
+        &--text
+          h3
+            font-size 30px
+
+
+

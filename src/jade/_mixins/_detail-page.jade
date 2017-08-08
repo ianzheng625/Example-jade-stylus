@@ -1,0 +1,574 @@
+//gallery category page
+mixin detail-gallery
+  .c-gallery__detail
+    .c-gallery__top
+      a(href).c-gallery__top--img
+        .img-background(style="background-image: url('./assets/img/gallery-01.jpg')")
+        .c-shadow__text
+          .top-line
+            hr
+          p les folies de pigalle
+            span jan.01
+        .bg--shadow
+        .bg--shadow__text
+    .owl-carousel.owl-theme(data-js-owlcarousel-list)
+      each i in [1, 2, 3]
+        .c-gallery__imglist
+          each i in [1, 2, 3, 4, 5, 6]
+            a(href).c-gallery__img
+              .img-background(style="background-image: url('./assets/img/gallery-02.jpg')")
+              .bg--shadow
+              .bg--shadow__text
+              .c-shadow__text
+                .top-line
+                  hr
+                p international clubs
+
+    a(href).c-gallery__link Check out our upcoming events
+      span.icon-right
+
+//gallery photo list
+mixin detail-gallery-photo
+  .c-photo
+    .c-photo__back
+      a(href="/")
+        span.icon-left
+        | back to the gallery
+    .owl-carousel.owl-theme(data-js-owlcarousel-list)
+      each i in [1, 2, 3]
+        .c-photo__blocks
+          +detail-gallery-photo-lengthways
+          +detail-gallery-photo-crosswise
+          +detail-gallery-photo-crosswise
+          +detail-gallery-photo-lengthways
+          +detail-gallery-photo-lengthways
+          +detail-gallery-photo-crosswise
+
+mixin detail-gallery-photo-crosswise
+  .c-photo__block.c-photo__crosswise
+    each i in [1, 2]
+      .c-photo__img.js-btn-open
+        .c-photo__img--crosswise(style= "background-image:url('./assets/img/gallery-photo-01.jpg')" )
+        .bg--shadow
+        .bg--shadow__text
+        .c-shadow__text
+          p photo name
+mixin detail-gallery-photo-lengthways
+  .c-photo__block.c-photo__lengthways
+    each i in [1, 2]
+      .c-photo__img.js-btn-open
+        .c-photo__img--lengthways(style= "background-image:url('./assets/img/detail-info.jpg')" )
+        .bg--shadow
+        .bg--shadow__text
+        .c-shadow__text
+          p photo name
+
+mixin detail-gallery-photo-popup
+  .c-photo__popup
+    .c-photo__popup--slider
+      .owl-carousel.owl-theme(data-js-owlcarousel-popup)
+        - var i = 0;
+        while i++ <= 35
+          .c-photo__popup--block
+            img(src=paths.img + "gallery-photo-01.jpg")
+            .c-photo__popup--text
+              h2 photo name
+              .top-line
+                hr
+              p Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      .c-photo__popup--close.js-btn-close
+        span.icon-cross
+
+
+//events list page
+mixin detail-events
+  .c-events__detail
+    .owl-carousel.owl-theme(data-js-owlcarousel-list)
+      each i in [1, 2, 3]
+        .c-events__lists
+          each i in [1, 2, 3, 4]
+            a(href="#").c-events__list.clearfix.js-btn-open
+              .c-events__list--img
+                .img-background(style="background-image: url('./assets/img/events-popup-01.jpg')")
+                .bg--shadow
+              .c-events__list--bg
+                .c-events__list--text
+                  h2 rnb dj show
+                  .top-line
+                    hr
+                  .c-events__list--text--date
+                    p may.
+                      span 02
+                    h3 wedesday
+                  p Lorem ipsum dolor sit amet, consectetur adipising elit.
+
+mixin detail-events-popup
+  .c-events__popup
+    .c-events__popup--slider
+      .owl-carousel.owl-theme(data-js-owlcarousel-popup)
+        - var i = 0;
+        while i++ <= 11
+          .c-events__popup--block
+            img.img-desktop(src=paths.img + "events-popup-01.jpg")
+            .img-mobile.img-background(style="background-image: url('./assets/img/events-popup-01.jpg')")
+            .c-events__popup--text
+              h2 event name
+              .top-line
+                hr
+              .c-events__popup--text--icon
+                p.c-events__popup--text--calendar
+                  span.icon-calendar
+                  | may 02 firday
+                p.c-events__popup--text--time
+                  span.icon-time
+                  | 11:00pm - 3:00am
+                p.c-events__popup--text--rmb
+                  span.icon-rmb
+                  | 100 rmb
+              p Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vei eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero nulla facilisi.
+      .c-events__popup--close.js-btn-close
+        span.icon-cross
+
+//lounge detail page
+mixin detail-lounge-intro
+  .c-lounge__detail
+    .c-lounge__detail--slider
+      .owl-carousel.owl-theme(data-js-owlcarousel)
+        each i in [1, 2, 3, 4]
+          .c-lounge__detail--img
+            .img-background(style="background-image: url('./assets/img/lounge-01.jpg')")
+    .c-lounge__detail--text
+      .c-lounge__detail--title
+        .top-line
+          hr
+        h2 Lounge room
+        .top-line
+          hr
+      .c-lounge__detail--black
+        .top-line
+          hr
+        p Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+mixin detail-lounge-bunnies
+  .c-lounge__detail
+    .c-lounge__detail--slider
+      .owl-carousel.owl-theme(data-js-owlcarousel)
+        each i in [1, 2, 3, 4]
+          .c-lounge__detail--img
+            .img-background(style="background-image: url('./assets/img/lounge-01.jpg')")
+    .c-lounge__detail--text
+      .c-lounge__detail--black
+        .top-line
+          hr
+        p Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      .c-lounge__detail--title
+        .top-line
+          hr
+        h2 Meet our bunnies
+        .top-line
+          hr
+
+mixin detail-lounge-food
+  .c-lounge__detail
+    .c-lounge__detail--food
+      .top-line
+        hr
+      h2 Food and beverage
+      .top-line
+        hr
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    .c-lounge__detail--food--imgs(data-js-scroll-load)
+      each i in [1, 2, 3, 4]
+        div(class='c-lounge__detail--food--img--'+i)
+          img(src=paths.img + "detail-images-0#{i}.jpg" alt="")
+          .bg--shadow
+
+//Club rooms detail
+mixin detail-clubrooms-slider
+  .c-clubrooms__detail(data-js-change-page)
+    .c-clubrooms__detail--pagination
+      - list = ['cinema bar', 'living room', 'library room', 'drawing room']
+        each item in list
+          if item == 'cinema bar'
+            .c-clubrooms__detail--pagination--button.js-change-button.is-active
+              p=item
+          else 
+            .c-clubrooms__detail--pagination--button.js-change-button
+              p=item
+
+    .c-clubrooms__detail--detail
+      each item in list
+        if item == 'cinema bar'
+          .c-clubrooms__detail--content.js-change-page.is-active
+            +detail-clubrooms-intro
+            +detail-clubrooms-service
+            +detail-clubrooms-program
+            +detail-info
+        else
+          .c-clubrooms__detail--content.js-change-page
+            +detail-clubrooms-intro
+            +detail-clubrooms-service
+            +detail-clubrooms-program
+            +detail-info
+
+mixin detail-clubrooms-intro
+  .c-clubrooms__detail
+    .c-clubrooms__detail--slider
+      .owl-carousel.owl-theme(data-js-owlcarousel)
+        each i in [1, 2, 3, 4]
+          .c-clubrooms__detail--img
+            .img-background(style="background-image: url('./assets/img/lounge-01.jpg')")
+    .c-clubrooms__detail--text
+      .c-clubrooms__detail--title
+        .top-line
+          hr
+        h2 Living room
+        .top-line
+          hr
+      .c-clubrooms__detail--black
+        .top-line
+          hr
+        p Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+mixin detail-clubrooms-service
+  .c-clubrooms__detail.c-clubrooms__detail--service
+    .c-clubrooms__detail--slider
+      .owl-carousel.owl-theme(data-js-owlcarousel)
+        each i in [1, 2, 3, 4]
+          .c-clubrooms__detail--img
+            .img-background(style="background-image: url('./assets/img/lounge-01.jpg')")
+    .c-clubrooms__detail--text
+      .c-clubrooms__detail--title
+        .top-line
+          hr
+        h2 room service
+        .top-line
+          hr
+      .c-clubrooms__detail--black
+        .top-line
+          hr
+        p Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+mixin detail-clubrooms-program
+  .c-clubrooms__detail
+    .c-clubrooms__detail--program
+      .top-line
+        hr
+      h2 program of room
+      .top-line
+        hr
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    .c-clubrooms__detail--program--imgs(data-js-scroll-load)
+      each i in [1, 2, 3, 4]
+        div(class='c-lounge__detail--program--img--'+i)
+          img(src=paths.img + "detail-images-0#{i}.jpg" alt="")
+          .bg--shadow
+
+//detail info
+mixin detail-info
+  .c-info__detail
+    .c-info__detail--img
+      img(src=paths.img + "detail-info.jpg" alt="")
+    .c-info__detail--text
+      h3 opening time and reservations
+      .c-info__detail--opentimes
+        .c-info__detail--opentime
+          p
+            span.icon-calendar
+            | fri - sat
+          p
+            span.icon-time
+            | 5pm - 3am
+        .c-info__detail--opentime
+          p
+            span.icon-calendar
+            | sun - thu
+          p
+            span.icon-time
+            | 5pm - 1am
+      .c-info__detail--contact
+        p
+          span.icon-phone
+          | 086 - 21 -12345678
+        a(href="mailto:customer.service@playboy.com?cc=customer.service@playboy.com&subject=playboy&body=welcome")
+          span.icon-mail
+          p customer.service@playboy.com
+
+//detail news
+mixin detail-news
+  .c-news
+    .c-news__content
+      +detail-news-date-right
+      +detail-news-year-left
+      +detail-news-year-right
+      +detail-news-yearspan-left
+      +detail-news-year-right
+    .c-news__content
+      +detail-news-date-right
+      +detail-news-year-left
+      +detail-news-year-right
+      +detail-news-yearspan-left
+      +detail-news-year-right
+
+mixin detail-news-date-right
+  .c-news__detail
+    .c-news__detail--img--right                 
+      .c-news__detail--title.c-news__detail--date
+        .top-line
+          hr
+        h2 2016.12.01
+        .top-line
+          hr
+        p playboy lounge shanghai grand opening
+      .c-news__detail--img
+        img.c-news__show--desktop(src=paths.img + "news-01.jpg" alt="")
+        img.c-news__show--mobile(src=paths.img + "news-mobile-01.jpg" alt="")
+        .bg--shadow
+      .c-news__detail--text
+        .top-line
+          hr
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          a(href="/" target="_blank") View All >
+    +detail-news-timeline
+
+mixin detail-news-year-right
+  .c-news__detail
+    .c-news__detail--img--right
+      .c-news__detail--title.c-news__detail--year
+        .top-line
+          hr
+        h2 2010
+        .top-line
+          hr
+        p playboy lounge shanghai grand opening
+      .c-news__detail--img
+        img.c-news__show--desktop(src=paths.img + "news-square.jpg" alt="")
+        img.c-news__show--mobile(src=paths.img + "news-square-mobile.jpg" alt="")
+        .bg--shadow
+      .c-news__detail--text
+        .top-line
+          hr
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.    
+    +detail-news-timeline       
+
+mixin detail-news-yearspan-right
+  .c-news__detail
+    .c-news__detail--img--right
+      .c-news__detail--title.c-news__detail--yearspan
+        .top-line
+          hr
+        h2 2016.12.01
+        .top-line
+          hr
+        p playboy lounge shanghai grand opening
+      .c-news__detail--img
+        img.c-news__show--desktop(src=paths.img + "news-01.jpg" alt="")
+        img.c-news__show--mobile(src=paths.img + "news-mobile-01.jpg" alt="")
+        .bg--shadow
+      .c-news__detail--text
+        .top-line
+          hr
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    +detail-news-timeline
+
+mixin detail-news-date-left
+  .c-news__detail
+    .c-news__detail--img--left
+      .c-news__detail--title.c-news__detail--date
+        .top-line
+          hr
+        h2 2016.12.01
+        .top-line
+          hr
+        p playboy lounge shanghai grand opening
+      .c-news__detail--img
+        img.c-news__show--desktop(src=paths.img + "news-01.jpg" alt="")
+        img.c-news__show--mobile(src=paths.img + "news-mobile-01.jpg" alt="")
+        .bg--shadow
+      .c-news__detail--text
+        .top-line
+          hr
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          a(href="/" target="_blank") View All >   
+    +detail-news-timeline            
+
+mixin detail-news-year-left
+  .c-news__detail
+    .c-news__detail--img--left
+      .c-news__detail--title.c-news__detail--year
+        .top-line
+          hr
+        h2 2015
+        .top-line
+          hr
+        p playboy lounge shanghai grand opening
+      .c-news__detail--img
+        img.c-news__show--desktop(src=paths.img + "news-01.jpg" alt="")
+        img.c-news__show--mobile(src=paths.img + "news-mobile-01.jpg" alt="")
+        .bg--shadow
+      .c-news__detail--text
+        .top-line
+          hr
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.   
+    +detail-news-timeline           
+
+mixin detail-news-yearspan-left
+  .c-news__detail
+    .c-news__detail--img--left
+      .c-news__detail--title.c-news__detail--yearspan
+        .top-line
+          hr
+        h2 1976-1980
+        .top-line
+          hr
+        p playboy lounge shanghai grand opening
+      .c-news__detail--img
+        img.c-news__show--desktop(src=paths.img + "news-square.jpg" alt="")
+        img.c-news__show--mobile(src=paths.img + "news-square-mobile.jpg" alt="")
+        .bg--shadow
+      .c-news__detail--text
+        .top-line
+          hr
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    +detail-news-timeline
+               
+mixin detail-news-timeline
+  .c-news__timeline
+    .c-news__timepoint
+
+//become a bunny
+mixin detail-become-bunny
+  .c-become
+    .c-become__header
+      .c-become__header--text
+        p= becomeHeaderText
+      .c-become__header--img
+        img(src=becomeHeaderImage_264x445 alt=becomeHeaderAlt)
+
+    +detail-become-bunny-summary
+    +detail-join-us
+    +form-result
+
+mixin detail-become-bunny-summary
+  .c-become__detail
+    .c-become__detail--title
+      .top-line
+        hr
+      h2= becomeTitle
+      .top-line
+        hr
+    .c-become__detail--right
+      .c-become__detail--img
+        img(src=becomeRightImage_465x275 alt=becomeRightAlt)
+        .bg--shadow
+      .c-become__detail--black
+        .top-line
+          hr
+        p=becomeBlackText
+    .c-become__detail--left
+      .c-become__detail--img
+        img(src=becomeLeftImage_465x275 alt=becomeLeftAlt)
+        .bg--shadow
+      .c-become__detail--black
+        .top-line
+          hr
+        p=becomeBlackText
+
+mixin detail-join-us
+  .c-join
+    .c-join__title
+      .top-line
+        hr
+      h2= joinTitle
+      .top-line
+        hr
+    .c-join__form(data-js-join-us)
+      form( id="join_form" data-js-join-form action="index.php")
+        .c-join__form--img
+          .form-field.c-join__form--update.null
+            p UPLOAD PHOTO (<10MB)*
+            input(type="file" name="upload_file-1" id="upload_file_1" accept="image/png, image/jpg, image/jpeg, image/gif, image/bmp")
+            .error-text
+              p.error-en Invalid info.
+              p.error-zh 请填写正确格式
+
+          .form-field.c-join__form--update
+            p UPLOAD PHOTO (<10MB)
+            input(type="file" name="upload_file-2" id="upload_file_2" accept="image/png, image/jpg, image/jpeg, image/gif, image/bmp")
+
+        .c-join__form--half
+          .form-field.null
+            input(type="text" placeholder="NAME*" name="name")
+            .error-text 
+              p.error-en Invalid info.
+              p.error-zh 请填写正确格式
+
+          .form-field.null
+            input(type="text" placeholder="AGE*" name="age")
+            .error-text
+              p.error-en Invalid info.
+              p.error-zh 请填写正确格式
+
+        .c-join__form--half  
+          .form-field.null
+            input(type="text" placeholder="NATIONALITY*" name="nationality")
+            .error-text
+              p.error-en Invalid info.
+              p.error-zh 请填写正确格式
+
+          .form-field.null
+            input(type="text" placeholder="EDUCATIONAL LEVEL*" name="education")
+            .error-text
+              p.error-en Invalid info.
+              p.error-zh 请填写正确格式
+
+        .c-join__form--half 
+          .form-field.null
+            input(type="text" placeholder="PHONE*" name="phone") 
+            .error-text
+              p.error-en Invalid info.
+              p.error-zh 请填写正确格式
+
+          .form-field.null
+            input(type="email" placeholder="EMAIL*" name="email")
+            .error-text
+              p.error-en Invalid info.
+              p.error-zh 请填写正确格式
+
+        .c-join__form--full
+          .form-field.null
+            input(type="text" placeholder="CURRENT COUNTRY OF RESIDENCE*" name="country" )
+            .error-text
+              p.error-en Invalid info.
+              p.error-zh 请填写正确格式
+
+          .form-field.c-join__form--update
+            p.file-tip UPLOAD CV IN PDF/WORD FORMAT(<10MB)
+            p.file-path
+            input(type="file" name="upload_cv" id="upload_cv" accept=".pdf, .doc, .docx")
+          
+          .form-field.null
+            textarea(placeholder="WORK EXPERIENCE*" name= "experience")
+            .error-text
+              p.error-en Invalid info.
+              p.error-zh 请填写正确格式
+
+          p *Required
+
+        a(id="info-check-submit").button.text-center.c-join__submit SUBMIT >
+
+
+      .c-join__img
+        img(src=joinImage_362x880 alt=joinImageAlt)
+
+mixin form-result
+  .c-result__popup
+    .c-result__popup--loading
+    .c-result__popup--success
+    .c-result__popup--error
+
+
+
+    
+
+

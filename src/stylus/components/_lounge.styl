@@ -1,0 +1,214 @@
+.c-lounge
+  clearfix()
+  max-width 1024px
+  position relative
+  margin 0 auto
+  padding 70px 0
+  &__imgs
+    clearfix()
+    float left
+    width 50%
+    position relative
+    padding-left 5%
+    .bg--shadow
+      top 400px
+    img 
+      display block
+      width 100%
+      position relative
+      top 400px
+    .c-lounge__img
+      &--1
+        width 20%
+        float left
+        position relative
+        margin-left 20%
+        margin-top 5%
+        overflow hidden
+      &--2
+        width 55%
+        float right
+        position relative
+        overflow hidden
+        &:hover
+          z-index 5
+      &--3
+        width 55%
+        float left
+        position relative
+        margin-top -35%
+        z-index 3
+        overflow hidden
+        .bg--shadow
+          z-index 4
+      &--4
+        width 20%
+        float right
+        position relative
+        margin-top 50px
+        overflow hidden
+    &.active
+      img,
+      .bg--shadow
+        top 0
+      .c-lounge__img
+        &--1,
+        &--2,
+        &--3,
+        &--4
+          &:hover
+            .bg--shadow
+              opacity 0
+              z-index -1
+            img
+              transform scale(1.1,1.1)
+            img,
+            .bg--shadow
+              transition top 1s ease, opacity 1s ease, z-index 1s ease, transform ease 1s
+        &--1
+          img,
+          .bg--shadow
+            transition top 1s ease, opacity 1s ease, z-index 1s ease, transform ease 1s
+        &--2
+          img,
+          .bg--shadow
+            transition top 1s ease .5s, opacity 1s ease, z-index 1s ease, transform ease 1s
+        &--3
+          img,
+          .bg--shadow
+            transition top 1s ease 1s, opacity 1s ease, z-index 1s ease, transform ease 1s
+        &--4
+          img,
+          .bg--shadow
+            transition top 1s ease 1.5s, opacity 1s ease, z-index 1s ease, transform ease 1s
+  &__text
+    clearfix()
+    float right
+    width 36%
+    text-align right
+    padding-top 5%
+    padding-right 5%
+    .top-line
+      clearfix()
+      hr
+        margin-top 0
+        margin-bottom 0
+        width 25px
+        float right
+        border 1px solid black
+      &.top-line--gold
+        hr
+          width 35px
+          border 1px solid $col-gold
+    h2
+      color black
+      font-family $font-kh-68
+      font-size 88px
+      line-height 1em
+      padding 15px 0
+      margin-top 0
+      margin-bottom 0
+      text-transform uppercase
+    h3 
+      color black
+      margin-top 0
+      margin-bottom 0
+      font-family $font-bc
+      font-size 32px
+      font-style italic
+      line-height 1em
+      padding 15px 0
+      text-transform uppercase
+    p 
+      font-size 16px
+      color black
+      line-height 2em
+      padding 15px 0
+      margin-bottom 0
+  .button--learn-more
+    float right
+  &__img-mobile
+    display none
+    width 80%
+    margin 0 auto
+    img
+      width 100%
+      display block
+    &-small
+      width 32%
+      float left
+    &-small:nth-child(2)
+      margin 0 2% 
+
+
+@media $medium
+  .c-lounge
+    &__text
+      padding 0 4% 0 0
+      h2
+        font-size 72px
+      h3 
+        font-size 24px
+
+@media $small
+  .c-lounge
+    &__imgs
+      display none
+    &__text
+      width 80%
+      float none
+      text-align center
+      margin 0 auto
+      padding 50px 0
+      h2
+        font-size 60px
+      h3
+        font-size 20px
+      .top-line
+        hr
+          float none
+          margin 0 auto
+    .button--learn-more
+      float none
+    &__img-mobile
+      display block
+      
+
+html:lang(zh-CN)
+  .c-lounge
+    &__text
+      h2
+        font-weight bold
+        font-family $font-zh
+        font-size 60px
+        line-height 1.2em
+        padding 15px 0
+      h3 
+        font-family $font-zh
+        font-size 28px
+      p 
+        line-height 2em
+
+@media $medium
+  html:lang(zh-CN)
+    .c-lounge
+      &__text
+        h2
+          font-size 56px
+          line-height 1em
+        h3 
+          font-size 24px
+        p 
+          line-height 2em
+@media $small
+  html:lang(zh-CN)
+    .c-lounge
+      &__text
+        h2
+          font-size 40px
+          line-height 1em
+        h3
+          font-size 20px
+        p 
+          line-height 2em
+

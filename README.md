@@ -1,1 +1,1 @@
-# Expample-jade-stylus
+# Example-jade-stylus

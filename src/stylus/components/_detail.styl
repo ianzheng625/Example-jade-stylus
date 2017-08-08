@@ -1,0 +1,260 @@
+.c-detail
+  .c-content__right
+    position relative
+  .c-nav__logo
+    img
+      display block
+  img
+    width 100%
+  &__block
+    clearfix()
+    max-width 1024px
+    margin 0 auto
+    position relative
+    margin-top -100px
+    padding 0 30px
+  &__title
+    background-color black
+    padding 20px 40px
+    text-align left
+    position relative
+    float left
+    &.is-active
+      h2
+        max-width 300px
+    .top-line
+      clearfix()
+      hr
+        margin-top 0
+        margin-bottom 0
+        width 20px
+        border 1px solid white
+        float left
+    h2
+      font-size 88px
+      color white
+      line-height .8em
+      font-family $font-kh-68
+      text-transform uppercase
+      margin 10px 0
+      p
+        font-family $font-kh-26
+        font-size 40px
+        color white
+        text-transform uppercase
+        display block
+        line-height .8em
+        margin-bottom 20px
+    p
+      color white
+      margin-top 10px
+      font-size 16px
+      font-family $font-bc
+    &--button--left,
+    &--button--right
+      position absolute
+      width 40px
+      height 40px
+      background-color black
+      top 120px
+      z-index 100
+      transition background-color .8s
+      span
+        transition color .8s
+        color white
+        &:before
+          position relative
+          left -3px
+          top 4px
+          font-size 30px
+      &:hover
+        background-color $col-gold
+        span
+          color black
+    &--button--left
+      left -45px
+    &--button--right
+      right -45px
+  &__mobileshow
+    display none
+  &__header
+    &--text
+      max-width 1024px
+      padding 0 30px
+      margin 30px auto 60px
+      text-align center
+      .top-line
+        display none
+      h2
+        color black
+        font-size 60px
+        font-family $font-kh-68
+        line-height 1.5em
+        text-transform uppercase
+      p
+        color black
+        font-size 16px
+        line-height 2em
+  &__block--white
+    max-width 1024px
+    margin 0 auto
+    padding 50px 10% 30px
+  &__title--white
+    width 50%
+    margin-bottom 20px
+    h2
+      font-family $font-kh-68
+      font-size 90px
+      line-height 1em
+      color black
+      text-transform uppercase
+      text-align left
+    .top-line
+      clearfix()
+      hr
+        float left
+        width 25px
+        margin 15px 0
+        border-color black
+  &__content--text
+    p
+      text-align left
+      line-height 2em
+      margin-bottom 20px
+@media $medium
+  .c-detail
+    &__title
+      h2
+        font-size 72px
+        p
+          font-size 36px
+
+@media $small
+  .c-detail
+    &__block
+      margin-top -70px
+      padding 0px !important
+      max-width calc(100% - 60px)
+    &__title
+      margin 0 auto
+      padding 20px 40px
+      float none
+      min-width inherit
+      display inline-block
+      h2
+        line-height 1em
+        font-size 54px
+        text-align center
+        p
+          font-size 32px
+      .top-line
+        hr
+          float none
+          margin 0 auto
+      p
+        text-align center
+      &--button--left,
+      &--button--right
+        background-color $col-gold
+        span
+          color black
+          &:before
+            position relative
+      &--button--left
+        left -25px
+        bottom initial
+        top 45%
+      &--button--right
+        right -25px
+        bottom initial
+        top 45%
+    &__desktopshow
+      display none
+    &__mobileshow
+      display block
+    &__header
+      &--text
+        .top-line
+          display block
+          hr
+            width 20px
+            float none
+            margin 15px auto
+            border-color black
+        h2
+          line-height 1em
+          font-size 54px
+    &__block--white
+      padding-top 100px
+    &__title--white
+      width 80%
+      margin-bottom 0
+      h2
+        font-size 48px
+    &__content--text
+      p
+        line-height 1.5em
+
+html:lang(zh-CN)
+  .c-detail
+    &__title
+      h2
+        font-weight bold
+        line-height 1em
+        font-family $font-zh
+        font-size 60px
+        padding 15px 0
+        p
+          font-size 24px
+          line-height 1em
+          font-family $font-zh
+          margin-bottom 0
+          margin-top 15px
+    &__header--text
+      h2
+        font-weight bold
+        line-height 1em
+        font-family $font-zh
+        font-size 54px
+        padding 15px 0
+    &__title--white
+      h2
+        font-weight bold
+        line-height 1em
+        font-family $font-zh
+        font-size 60px
+        padding 15px 0
+          
+        
+@media $medium
+  html:lang(zh-CN)
+    .c-detail
+      &__title
+        h2
+          font-size 54px
+          p
+            font-size 20px
+      &__header--text
+        h2
+          font-size 40px
+      &__title--white
+        h2
+          font-size 54px
+@media $small
+  html:lang(zh-CN)
+    .c-detail
+      &__title
+        h2
+          font-size 30px 
+          p
+            font-size 16px
+      &__header--text
+        h2
+          font-size 36px
+      &__title--white
+        h2
+          font-size 40px
+        
+
+          
+

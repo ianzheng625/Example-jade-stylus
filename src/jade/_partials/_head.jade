@@ -1,0 +1,19 @@
+include ../_mixins/_helper
+
+include _config
+
+head
+  title Playboy
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+  meta(name='description', content=appDescription)
+  meta(name='keywords', content=appKeywords)
+  meta(http-equiv="X-UA-Compatible",content="IE=edge,chrome=1")
+  <!--[if (gt IE 9)]><!-->
+  link(rel='stylesheet', type="text/css", href=paths.css + 'app.css')
+  <!--<![endif]-->
+  <!--[if (lte IE 9)]>
+  link(rel='stylesheet', type="text/css", href=paths.css + 'app-ie.css')
+  link(rel='stylesheet', type="text/css", href=paths.css + 'app-ie-blessed1.css')
+  <![endif]--> 
+  link(rel='shortcut icon' href=paths.img + 'favicon.ico' type='image/ico')

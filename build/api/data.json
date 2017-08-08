@@ -1,0 +1,27 @@
+[
+  {
+    "content": "{ 'bannerImageDesktop_1400x1040': './assets/img/homepage-slider-01.jpg', 'h1': '<h1>Welcome to<img src=./assets/img/homepage-slider-03.png>Playboy <span>Shanghai </span>club</h1>' }",
+    "key": "slider",
+    "link": "",
+    "module": "/home"
+  },
+  {
+    "content": "{ 'bannerImageDesktop_1400x1040': './assets/img/homepage-slider-01.jpg', 'h1': '<h1>Welcome to<img src=./assets/img/homepage-slider-03.png>Playboy <span>Shanghai </span>club</h1>' }",
+    "key": "slider",
+    "link": "",
+    "module": "/home"
+  },
+  {
+    "content": "{ 'bannerImageDesktop_1400x1040': './assets/img/homepage-slider-01.jpg', 'h1': '<h1>Welcome to<img src=./assets/img/homepage-slider-03.png>Playboy <span>Shanghai </span>club</h1>' }",
+    "key": "slider",
+    "link": "",
+    "module": "/home"
+  },
+  {
+    "content": "{'aboutTitle': 'Life is too short to be living somebody else`s dream','aboutName':'hugh hefner','aboutImage_490x365':'./assets/img/homepage-about-01.jpg','aboutImageAlt':'1'}",
+    "key": "about",
+    "link": "",
+    "module": "/home"
+  }
+]
+

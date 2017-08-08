@@ -1,0 +1,101 @@
+mixin nav-desktop(title)
+  .c-nav.c-nav--desktop(data-js-navigation)
+    .c-nav__logo
+      a(href)
+        span.icon-logo
+    .c-nav__block
+      ul
+        - list = ['lounge', 'rooms', 'events', 'news', 'gallery', 'become a bunny']
+        each item in list
+          if item == title
+            li.active
+              .top-line
+                hr
+              a(href="/")=item 
+          else
+            li
+              .top-line
+                hr
+              a(href="/")=item 
+      .c-nav__buttons
+        .c-nav__btn-audio(data-js-audio)
+          span.icon-audio
+          audio#bgMusic(src="http://www.w3school.com.cn/i/song.mp3" preload="auto" loop type="audio/mpeg")
+        .c-nav__share
+          a.c-nav__share-instagram
+            span.icon-instagram
+          a.c-nav__share-facebook(href="javascript:void(0);" onClick="javascript:window.open('https://www.facebook.com/login.php?skip_api_login=1&api_key=140586622674265&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv2.0%2Fdialog%2Fshare%3Fredirect_uri%3Dhttp%253A%252F%252Fs7.addthis.com%252Fstatic%252Fthankyou.html%26display%3Dpopup%26href%3Dhttp%3a%2f%2f10.148.61.70%3a8080%2fweb%2fguest%2fhome%26title%3DWelcome+to+Playboy+Lounge+Shanghai%26description%26picture%26client_id%3D140586622674265%26ret%3Dlogin&cancel_url=http%3A%2F%2Fs7.addthis.com%2Fstatic%2Fthankyou.html%3F%23_%3D_&display=popup','','');return false;")
+            span.icon-facebook
+          a.c-nav__share-weibo(target="_blank" href="http://service.weibo.com/share/share.php?url=http://10.148.61.70:8080/web/guest/home&title=欢迎来到上海首家花花公子酒廊&appkey=1343713053")
+            span.icon-sina-weibo
+          a.c-nav__share-wechat
+        .c-nav__language(data-js-language-change)
+          a.show-on-en(href="javascript:void(0);") CN
+          a.show-on-zh(href="javascript:void(0);") EN
+      .c-nav__qrcode
+        img(src=paths.img + "nav-01.jpg" alt="")
+        p book now
+      .c-nav__contact
+        .c-nav__telephone
+          span.icon-phone
+          p 086-21-12345678
+        a.c-nav__email(href="mailto:customer.service@playboy.com?cc=customer.service@playboy.com&subject=playboy&body=welcome")
+          span.icon-mail
+          p reservations@playboyloungeshanghai.com
+
+  +nav-wechat
+
+
+mixin nav-mobile
+  .c-nav.c-nav--mobile(data-js-mobile-menu)
+    .c-nav__mobile-buttons
+      .c-nav__btn-open.js-btn-open
+        span.icon-menu
+      .c-nav__btn-audio(data-js-audio)
+        span.icon-audio
+  .c-nav__menu
+    .c-nav__menu-logo
+      a(href)
+        span.icon-logo
+    .c-nav__btn-close.js-btn-close
+      span.icon-cross
+    ul
+      each item in list
+        li
+          a(href="/")=item
+    .c-nav__buttons.clearfix
+      .c-nav__share
+        a.c-nav__share-instagram
+          span.icon-instagram
+        a.c-nav__share-facebook(href="javascript:void(0);" onClick="javascript:window.open('https://www.facebook.com/login.php?skip_api_login=1&api_key=140586622674265&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv2.0%2Fdialog%2Fshare%3Fredirect_uri%3Dhttp%253A%252F%252Fs7.addthis.com%252Fstatic%252Fthankyou.html%26display%3Dpopup%26href%3Dhttp%3a%2f%2f10.148.61.70%3a8080%2fweb%2fguest%2fhome%26title%3DPLAYBOY%26description%26picture%26client_id%3D140586622674265%26ret%3Dlogin&cancel_url=http%3A%2F%2Fs7.addthis.com%2Fstatic%2Fthankyou.html%3F%23_%3D_&display=popup','','');return false;")
+          span.icon-facebook
+        a.c-nav__share-weibo(target="_blank" href="http://service.weibo.com/share/share.php?url=http://10.148.61.70:8080/web/guest/home&title=Playboy&appkey=1343713053")
+          span.icon-sina-weibo
+        a.c-nav__share-wechat
+      .c-nav__language(data-js-language-change)
+        a.show-on-en(href="javascript:void(0);") CN
+        a.show-on-zh(href="javascript:void(0);") EN
+    .c-nav__qrcode
+      img(src=paths.img + "nav-01.jpg" alt="")
+      p book now
+
+mixin nav-wechat
+  .c-wechat(data-js-wechat)
+    .c-wechat__desktop
+      .c-wechat__qr
+        img(src="./assets/img/wechat-qr.png" alt="")
+      .top-line
+        hr
+      p 请打开微信并扫描二维码
+      p 点击右上角 ••• 分享
+    .c-wechat__mobile
+      .c-wechat__img
+        img(src="./assets/img/wechat-01.png" alt)
+        .c-wechat__img--text
+          p 1
+      .c-wechat__img
+        img(src="./assets/img/wechat-02.png" alt)
+        .c-wechat__img--text
+          p 2
+
+

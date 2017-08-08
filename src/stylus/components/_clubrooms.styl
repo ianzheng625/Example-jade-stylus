@@ -1,0 +1,273 @@
+.c-clubrooms
+  clearfix()
+  padding 70px 0
+  margin-top 75px
+  position relative
+  .owl
+    &-carousel
+      margin 0 auto
+      position relative
+      h3
+        color black
+        margin-top 0
+        margin-bottom 0
+        font-family $font-kh-68
+        font-size 60px
+        line-height 1em
+        text-transform uppercase
+      .top-line
+        clearfix()
+        hr
+          width 50px
+          display block
+          margin 20px auto
+          border-color $col-gold
+      p
+        color black
+        font-size 16px
+        line-height 1.2em
+        max-width 500px
+        margin-left auto
+        margin-right auto
+    &-pagination
+      display none
+    &-prev
+      position absolute
+      top 28%
+      left calc(50% - 338px)
+      margin 0
+      line-height 18px
+      &:before
+        content "\e900"
+        font-size 30px
+        position relative
+        top 10px
+        left -3px
+        color white
+      &:hover
+        &:before
+          color black
+    &-next
+      position absolute
+      top 28%
+      right calc(50% - 338px)
+      margin 0
+      line-height 18px
+      &:before
+        content "\e905"
+        font-size 30px
+        position relative
+        top 10px
+        left -3px
+        color white
+      &:hover
+        &:before
+          color black
+    &-theme
+      .owl-controls
+        .owl-buttons
+          div
+            background-color black
+            width 38px
+            height 38px
+            border-radius 0
+            opacity 1
+            padding 0
+            overflow hidden
+            font-family 'icomoon' !important
+            transition background-color .8s, color .8s
+            &:hover
+              background-color $col-gold
+  &__item
+    position absolute
+    top 65px
+    left 0
+    width 100%
+  &__text
+    display block
+    width calc(70% - 40px)
+    margin 0 auto
+    max-width 520px
+    background white
+    padding 55px 40px 20px
+  &__block
+    position relative
+  &__img
+    width 100%
+    img
+      width 100%
+      min-height 450px
+  &__fl
+    width calc(70% - 40px)
+    max-width 520px
+    background black
+    padding 20px 40px
+    position absolute
+    left 50%
+    bottom calc(100% - 475px)
+    margin-left calc(-40px - 35%)
+    z-index 1
+    .top-line
+      clearfix()
+      hr
+        margin-top 0
+        margin-bottom 0
+        float left
+        width 20px
+        border 1px solid white 
+    h2
+      margin-top 0
+      margin-bottom 0
+      font-family $font-kh-68
+      font-size 88px
+      line-height 1em
+      color white
+      text-align left
+      text-transform uppercase
+    h3
+      font-family $font-bc
+      font-size 32px
+      line-height 1em
+      margin-top 20px
+      margin-bottom 0
+      color white
+      text-align left
+      font-style italic 
+      text-transform uppercase
+  .button--learn-more
+    margin 10px 0
+  &.active
+    .c-clubrooms__fl
+      bottom calc(100% - 175px)
+      transition all 1s 
+
+@media $medium
+  .c-clubrooms
+    padding 100px 0 70px
+    &__item
+      top 50px
+    &__fl
+      h2 
+        font-size 72px
+      h3
+        font-size 24px
+    &__text
+      .top-line
+        hr
+          margin 15px auto
+    .owl
+      &-prev
+        left 7%
+        top 35%
+      &-next
+        right 7%
+        top 35%
+      &-carousel
+        h3
+          font-size 54px
+@media $small
+  .c-clubrooms
+    margin-top 0px
+    padding 120px 0 30px
+    .owl
+      &-prev
+        left 0
+        top 40%
+        &:before
+          color black
+      &-next
+        right 0
+        top 40%
+        &:before
+          color black
+      &-carousel
+        h3
+          font-size 48px
+        .top-line
+          hr
+            margin 15px auto
+      &-theme
+        .owl-controls
+          .owl-buttons
+            div
+              background-color $col-gold
+    &__item
+      top 55px
+    &__text
+      width 70%
+      padding 20px
+    &__fl
+      width 70%
+      padding 20px
+      left 50%
+      top initial
+      bottom calc(100% - 155px)
+      margin-left calc(-20px - 35%)
+      max-width none
+      .top-line
+        hr
+          float none
+          margin 0 auto
+      h2
+        text-align center
+        font-size 60px
+      h3
+        font-size 20px
+        text-align center
+        
+
+html:lang(zh-CN)
+  .c-clubrooms
+    &__fl
+      h2
+        font-weight bold
+        font-family $font-zh
+        font-size 60px
+        line-height 1em
+        padding 15px 0
+      h3 
+        font-size 28px
+        font-family $font-zh
+    .owl
+      &-carousel
+        h3
+          font-family $font-zh
+          font-size 40px
+          line-height 1em
+        p
+          line-height 1.5em
+
+@media $medium
+  html:lang(zh-CN)
+    .c-clubrooms
+      &__fl
+        h2
+          font-size 56px
+          line-height 1em
+        h3 
+          font-size 24px
+      .owl
+        &-carousel
+          h3
+            font-size 30px
+          p
+            line-height 1.5em
+
+@media $small
+  html:lang(zh-CN)
+    .c-clubrooms
+      &__fl
+        h2
+          font-size 40px
+          line-height 1em
+        h3 
+          font-size 20px
+      .owl
+        &-carousel
+          h3
+            font-size 24px
+          p
+            line-height 1.5em
+
+          
+

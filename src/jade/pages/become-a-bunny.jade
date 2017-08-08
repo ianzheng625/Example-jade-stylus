@@ -1,0 +1,23 @@
+extends ../_partials/_template
+
+include ../_mixins/_detail-header
+
+include ../_mixins/_nav
+
+include ../_mixins/_detail-page
+
+block content
+  
+  .c-content.become-a-bunny
+  
+    //+nav-desktop('news')
+    //+nav-mobile
+
+    +detail-header('become a bunny','','','','','at the shanghai playboy lounge')
+    
+    .c-content__right
+      +detail-become-bunny
+
+
+//- block footer-script
+//-     script(src=paths.js + "vendor/validator/jquery.validator.js?local=en")

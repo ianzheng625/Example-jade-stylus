@@ -1,0 +1,22 @@
+extends ../_partials/_template
+
+include ../_mixins/_homepage
+
+block content
+
+  .c-content.homepage
+  
+    +slider('nav')
+    
+    +about-us
+
+    .bg--black-white
+      +lounge
+    
+    +club-rooms
+
+    .bg--white-black
+      +events
+
+    +gallery
+

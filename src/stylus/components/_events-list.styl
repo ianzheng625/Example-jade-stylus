@@ -1,0 +1,532 @@
+.c-events__detail
+  max-width 1024px
+  padding 0 30px
+  margin 0 auto
+  .c-events
+    &__list
+      display block
+      position relative
+      margin 20px 0 120px
+      cursor pointer
+      &--img
+        width 55%
+        position absolute
+        top 0
+        left 0
+        z-index 1
+        overflow hidden
+        img
+          width 100%
+          display block
+        .img-background,
+        .bg--shadow
+          transition top 1s ease, opacity 1s ease, z-index 1s ease, transform ease 1s 
+        .img-background
+          height 27vw
+          max-height 360px
+          background-size cover
+          background-position 50%
+          background-repeat no-repeat
+        &:hover
+          .bg--shadow
+            opacity 0
+            z-index -1
+          .img-background
+            transform scale(1.1,1.1) 
+      &--bg
+        clearfix()
+        position relative
+        background-color black
+        float right
+        min-height 330px
+        top 0
+        right 0
+      &--text
+        float right
+        padding 30px 0
+        h2
+          font-size 88px
+          font-family $font-kh-27
+          text-transform uppercase
+          color #cacaca
+          line-height 1em
+          transition color .8s
+          margin-top 0
+          margin-bottom 0
+        .top-line
+          hr
+            width 35px
+            border 1px solid $col-gold
+            margin 20px auto
+        h3
+          font-size 64px
+          font-family $font-kh-27
+          text-transform uppercase
+          color #cacaca
+          line-height 1em
+          transition color .8s
+          margin-top 0
+          margin-bottom 0
+        p
+          font-size 16px
+          color #cacaca
+          line-height 1.5em
+          display inline-block
+          margin-top 20px
+          max-width 300px
+          transition color .8s
+          margin-bottom 0
+        &--date
+          position relative
+          p
+            margin-top 0
+            position absolute
+            top -1px
+            left 50%
+            margin-left -140px
+            font-size 14px
+            text-transform uppercase
+            color $col-gold
+            line-height 1em
+            margin-bottom 0
+            span
+              line-height 1em
+              font-family $font-kh-27
+              font-size 48px
+              text-transform uppercase
+              display block
+      &:hover
+        text-decoration none
+      
+    &__list:nth-child(1)
+      .c-events__list
+        &--bg
+          top 50px
+          width 90%
+        &--text
+          width 50%
+    &__list:nth-child(2)
+      .c-events__list
+        &--img
+          top inherit
+          bottom -50px
+        &--bg
+          top 0px
+          width 65%
+        &--text
+          width 69.2%
+    &__list:nth-child(3)
+      .c-events__list
+        &--bg
+          top 50px
+          width 55%
+        &--text
+          width 81.8%
+    &__list:nth-child(4)
+      .c-events__list
+        &--img
+          top inherit
+          bottom -50px
+        &--bg
+          top 0px
+          width 75%
+        &--text
+          width 60%
+  .owl  
+    &-carousel
+      margin-top 15px
+    &-pagination
+      margin-top 15px
+    &-theme
+      .owl-controls
+        .owl-page
+          background-color white
+          border-radius 0
+          font-family $font-kh-68
+          position relative
+          margin 0 10px
+          font-size 18px
+          transition all .5s
+          .owl-numbers
+            border-radius 0
+            background-color white
+            color black
+            opacity 1
+            font-size 18px
+            transition all .5s
+            &:hover
+              color $col-gold
+          &.active
+            background-color black
+            border none
+            .owl-numbers
+              background-color black
+              color white
+              &:hover
+                color white
+          &:before
+            content '・'
+            position absolute
+            right -20px
+            top 8px
+            color black
+          &:last-child:before
+            content ''
+
+@media $medium
+  .c-events__detail
+    .c-events
+      &__list
+        &--bg
+          min-height initial
+        &--text
+          padding 15px 0
+          h2
+            font-size 66px
+          h3
+            font-size 44px
+          p
+            margin-top 10px
+          .top-line
+            hr
+              margin 15px auto
+          &--date
+            p
+              top -21px
+              margin-left -110px
+              span
+                font-size 40px
+      &__list:nth-child(1)
+        .c-events__list
+          &--bg
+            top 30px
+      &__list:nth-child(2)
+        .c-events__list
+          &--img
+            bottom -30px
+      &__list:nth-child(3)
+        .c-events__list
+          &--bg
+            top 30px
+      &__list:nth-child(4)
+        .c-events__list
+          &--img
+            bottom -30px
+
+@media $small
+  .c-events__detail
+    padding 0
+    .c-events
+      &__list
+        margin 20px 0
+        &--img
+          width 100%
+          position relative
+          .img-background
+            height 50vw
+        &--bg
+          min-height 0
+          float none
+          right auto
+          position relative
+          top -22px !important
+          z-index 1
+          width 85% !important
+          margin 0 auto
+        &--text
+          width 100% !important
+          float none
+          padding 15px 0
+          h2
+            font-size 48px
+          h3
+            font-size 36px
+          p
+            padding 0 30px
+            margin-top 10px
+            max-width none
+          .top-line
+            hr
+              margin 10px auto
+          &--date
+            p
+              position static
+              margin-left auto
+              display inline
+              font-size 36px
+              padding 0
+              font-family $font-kh-27
+              span
+                font-size 36px
+                display inline
+                margin-right 10px
+            h3
+              display inline
+      &__list:nth-child(2)
+        .c-events__list
+          &--img
+            bottom 0
+      &__list:nth-child(4)
+        .c-events__list
+          &--img    
+            bottom 0  
+// event list popup
+.c-events__popup
+  position fixed
+  width 100%
+  height 100%
+  top 0
+  left 0
+  background-color rgba(0,0,0,.9)
+  z-index 201
+  overflow auto
+  display none
+  &.is-active
+    display block
+  &--slider
+    width 100%
+    max-width 750px
+    margin 7% auto 0
+    position relative
+  &--block
+    img
+      width 100%
+      display block
+    .img-mobile
+      display none
+    .img-background
+      height 40vw
+      background-size cover
+      background-position 50%
+      background-repeat no-repeat
+  &--text
+    background-color black
+    h2
+      padding 15px 0
+      top -25px
+      font-size 60px
+      font-family $font-kh-27
+      text-transform uppercase
+      color white
+      line-height 1em
+      transition color .8s
+      margin-top 0
+      margin-bottom 0
+    .top-line
+      hr
+        width 35px
+        margin 0px auto 15px
+        border 1px solid $col-gold
+    &--icon
+      p
+        font-size 20px
+        font-family $font-kh-27
+        line-height 1.5em
+        display inline-block
+        color $col-gold
+        padding-right 30px
+        text-transform uppercase
+        margin-bottom 0
+        .icon-calendar,
+        .icon-time,
+        .icon-rmb
+          font-size 26px
+          position relative
+          top 4px
+          right -3px
+    > p
+      font-size 16px
+      line-height 2em
+      color white
+      padding 20px 50px 30px 
+      margin-bottom 0
+  &--close
+    cursor pointer
+    position absolute
+    right 0
+    top -50px
+    width 35px
+    height 35px
+    color white
+    background-color black
+    span
+      font-size 20px
+      position relative
+      top 7px
+  .owl
+    &-pagination
+      display none
+    &-prev
+      position absolute
+      top 25%
+      left 5px
+      line-height 18px
+      &:before
+        content "\e900"
+        font-size 30px
+        position relative
+        top 10px
+        left -3px
+        color white
+      &:hover
+        &:before
+          color black
+    &-next
+      position absolute
+      top 25%
+      right 5px
+      line-height 18px
+      &:before
+        content "\e905"
+        font-size 30px
+        position relative
+        top 10px
+        left -3px
+        color white
+      &:hover
+        &:before
+          color black
+    &-theme
+      .owl-controls
+        .owl-buttons
+          div
+            background-color black
+            width 38px
+            height 38px
+            border-radius 0
+            opacity 1
+            padding 0
+            overflow hidden
+            font-family 'icomoon' !important
+            transition background-color .8s, color .8s
+            &:hover
+              background-color $col-gold
+@media $small
+  .c-events__popup
+    &--slider
+      margin-top 55px
+    &--block
+      .img-desktop
+        display none
+      .img-mobile
+        display block   
+    &--text
+      h2
+        font-size 48px
+        top -17px
+      .top-line
+        hr
+          width 25px
+      > p
+        line-height 1.5em
+        padding 20px 25px 30px
+      &--icon
+        p
+          padding-right 5px
+          font-size 24px
+    &--close
+      width 45px
+      height 45px
+      top -55px
+      background-color $col-gold
+      span
+        color black
+        top 10px
+        font-size 24px 
+    .owl
+      &-prev
+        top 24vw
+        left 0
+        &:before
+          top 17px
+          left 0px
+          color black
+      &-next
+        top 24vw
+        right 0
+        &:before
+          top 17px
+          left 0px
+          color black
+        
+      &-theme
+        .owl-controls
+          .owl-buttons
+            div
+              background-color $col-gold
+              width 50px
+              height 50px
+
+html:lang(zh-CN)
+  .c-events__detail
+    .c-events
+      &__list
+        &--text
+          h2
+            font-size 54px
+            font-family $font-zh
+          h3
+            font-size 36px
+            font-family $font-zh
+            padding 15px 0
+          &--date
+            p
+              position static
+              top -13px
+              font-size 36px
+              margin 0
+            h3
+              padding-top 10px
+  .c-events__popup
+    &--text
+      h2 
+        top -20px
+        font-size 40px
+        font-family $font-zh  
+      &--icon
+        p
+          font-size 18px
+          font-family $font-zh 
+        
+@media $medium
+  html:lang(zh-CN)
+    .c-events__detail
+      .c-events
+        &__list
+          &--text
+            h2
+              font-size 40px
+              padding 10px 0
+            h3
+              font-size 36px
+              padding 15px 0
+            &--date
+              p
+                top -12px
+
+@media $small
+  html:lang(zh-CN)
+    .c-events__detail
+      .c-events
+        &__list
+          &--text
+            h2
+              font-size 32px
+            h3
+              font-size 24px
+              padding 15px 0
+            &--date
+              p
+                display inline-block
+                font-size 24px
+                span
+                  font-size 28px
+    .c-events__popup
+      &--text
+        h2 
+          font-size 30px
+        &--icon
+          p
+            font-size 16px
+
+

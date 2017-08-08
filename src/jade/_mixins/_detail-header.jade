@@ -1,0 +1,51 @@
+mixin detail-header(title, text, size, date, button, introduce)
+  .c-detail
+    .c-content__right
+      img.c-detail__desktopshow(src=paths.img + 'gallery-header.jpg' alt="")
+      img.c-detail__mobileshow(src=paths.img + 'gallery-header-mobile.jpg' alt="")
+      .c-detail__block
+        if size == 'small'
+          .c-detail__title.is-active
+            .top-line
+              hr
+            h2= title
+              if introduce
+                p= introduce
+            .top-line
+              hr
+            if date
+              p= date
+            if button 
+              a(href="/").c-detail__title--button--left
+                span.icon-left
+              a(href="/").c-detail__title--button--right
+                span.icon-right
+        else
+          .c-detail__title
+            .top-line
+              hr
+            h2= title
+              if introduce
+                p= introduce
+            .top-line
+              hr
+            if date
+              p= date
+            if button 
+              a(href="/").c-detail__title--button--left
+                span.icon-left
+              a(href="/").c-detail__title--button--right
+                span.icon-right
+
+      if text == 'text'
+        .c-detail__header--text
+          .top-line
+            hr
+          h2 Lorem ipsum
+          .top-line
+            hr
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Ut enim ad minim veniam. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+
+
+
+              

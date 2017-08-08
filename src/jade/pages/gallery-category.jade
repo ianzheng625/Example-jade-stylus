@@ -1,0 +1,20 @@
+extends ../_partials/_template
+
+include ../_mixins/_detail-header
+
+include ../_mixins/_nav
+
+include ../_mixins/_detail-page
+
+block content
+  
+  .c-content
+    
+    //+nav-desktop('gallery')
+    //+nav-mobile
+
+    +detail-header('photo gallery')
+
+    .c-content__right
+      +detail-gallery
+

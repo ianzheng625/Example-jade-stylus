@@ -1,0 +1,138 @@
+/***
+ * Fonts: `.font`
+ */
+ 
+/**
+ * Name:
+ * `.font--name` - Name Light|Regular|Medium
+ * 
+ *     @example
+ *     p.font--name-light Light Hello world
+ *     p.font--name-regular Regular Hello world
+ *     p.font--name-medium Medium Hello world
+ */
+
+@css {
+  @font-face {
+    font-family: 'Knockout-HTF26';
+    src: url('../fonts/Knockout-HTF26-JuniorFlyweight.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Knockout-HTF26-JuniorFlyweight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/Knockout-HTF26-JuniorFlyweight.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/Knockout-HTF26-JuniorFlyweight.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/Knockout-HTF26-JuniorFlyweight.svg#c83e77b6f02e5018f0df29eaa13bffe3') format('svg'); /* Legacy iOS */
+    font-style:   normal;
+    font-weight:  700;
+  }
+  @font-face {
+    font-family: 'Knockout-HTF27';
+    src: url('../fonts/Knockout-HTF27-JuniorBantamwt.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Knockout-HTF27-JuniorBantamwt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/Knockout-HTF27-JuniorBantamwt.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/Knockout-HTF27-JuniorBantamwt.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/Knockout-HTF27-JuniorBantamwt.svg#c83e77b6f02e5018f0df29eaa13bffe3') format('svg'); /* Legacy iOS */
+    font-style:   normal;
+    font-weight:  700;
+  }
+  @font-face {
+    font-family: 'Knockout-HTF68';
+    src: url('../fonts/Knockout-HTF68-FullFeatherwt.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Knockout-HTF68-FullFeatherwt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/Knockout-HTF68-FullFeatherwt.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/Knockout-HTF68-FullFeatherwt.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/Knockout-HTF68-FullFeatherwt.svg#c83e77b6f02e5018f0df29eaa13bffe3') format('svg'); /* Legacy iOS */
+    font-style:   normal;
+    font-weight:  700;
+  }
+  @font-face {
+    font-family: 'big-caslon';
+    src: url('../fonts/big-caslon-medium.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/big-caslon-medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/big-caslon-medium.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/big-caslon-medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/big-caslon-medium.svg#c83e77b6f02e5018f0df29eaa13bffe3') format('svg'); /* Legacy iOS */
+    font-style:   normal;
+    font-weight:  700;
+  }
+  @font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?cxukyh');
+    src:  url('../fonts/icomoon.eot?cxukyh#iefix') format('embedded-opentype'),
+          url('../fonts/icomoon.ttf?cxukyh') format('truetype'),
+          url('../fonts/icomoon.woff?cxukyh') format('woff'),
+          url('../fonts/icomoon.svg?cxukyh#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+font-fa()
+  font-family 'FontAwesome'
+
+$fontNames = "Font name" 
+$classNames = "font-name"
+
+for $name, $i in $fontNames
+  .font--{$classNames[$i]}
+    font($name, true)
+
+[class^="icon-"], [class*=" icon-"]
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family 'icomoon' !important
+  speak none
+  font-style normal
+  font-weight normal
+  font-variant normal
+  text-transform none
+  line-height 1
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+
+.icon-calendar:before
+  content "\e906" !important
+  
+.icon-rmb:before
+  content "\e907" !important
+
+.icon-time:before 
+  content "\e908" !important
+
+.icon-left:before 
+  content "\e900" !important
+
+.icon-mail:before 
+  content "\e902" !important
+
+.icon-phone:before 
+  content "\e903" !important
+
+.icon-logo:before 
+  content "\e904" !important
+
+.icon-right:before 
+  content "\e905" !important
+
+.icon-audio:before 
+  content "\e901" !important
+
+.icon-location:before 
+  content "\e947" !important
+
+.icon-menu:before 
+  content "\e9bd" !important
+
+.icon-cross:before 
+  content "\ea0f" !important
+
+.icon-facebook:before 
+  content "\ea90" !important
+
+.icon-instagram:before 
+  content "\ea92" !important
+
+.icon-sina-weibo:before 
+  content "\ea9a" !important
+
+
+

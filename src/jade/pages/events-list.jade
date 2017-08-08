@@ -1,0 +1,24 @@
+extends ../_partials/_template
+
+include ../_mixins/_detail-header
+
+include ../_mixins/_nav
+
+include ../_mixins/_detail-page
+
+block content
+  
+  .c-content
+
+    //+nav-desktop('events')
+    //+nav-mobile
+    
+    +detail-header('events & parties')
+    
+    .c-content__right(data-js-events-popup)
+
+      +detail-events
+      
+      +detail-events-popup
+
+

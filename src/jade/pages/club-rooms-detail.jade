@@ -1,0 +1,23 @@
+extends ../_partials/_template
+
+include ../_mixins/_detail-header
+
+include ../_mixins/_nav
+
+include ../_mixins/_detail-page
+
+block content
+  
+  .c-content
+    
+    //+nav-desktop('rooms')
+    //+nav-mobile
+
+    +detail-header('playboy club rooms', 'text', 'small')
+
+    .c-content__right
+      +detail-clubrooms-slider
+
+
+
+

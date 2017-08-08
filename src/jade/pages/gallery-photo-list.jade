@@ -1,0 +1,21 @@
+extends ../_partials/_template
+
+include ../_mixins/_detail-header
+
+include ../_mixins/_nav
+
+include ../_mixins/_detail-page
+
+block content
+  
+  .c-content.history
+  
+    //+nav-desktop('gallery')
+    //+nav-mobile
+
+    +detail-header('les folies de pigalle', '', 'small', '2017.04.17', true)
+    
+    .c-content__right(data-js-gallery-popup)
+      
+      +detail-gallery-photo
+      +detail-gallery-photo-popup

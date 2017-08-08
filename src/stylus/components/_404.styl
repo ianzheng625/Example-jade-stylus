@@ -1,0 +1,69 @@
+.c-404
+  clearfix()
+  width 600px
+  margin 200px auto
+  text-align left
+  &__left
+    width 50%
+    float left
+  &__right
+    width 50%
+    float left
+    img
+      display block
+  &__sorry
+    font-family $font-kh-27
+    text-transform uppercase
+    font-size 172px
+    color black
+    line-height .8em
+  h2
+    font-family $font-kh-68
+    text-transform uppercase
+    font-size 257px
+    color black
+    line-height .75em
+  .c-404__text
+    font-family $font-kh-27
+    text-transform uppercase
+    font-size 72px
+    color black
+    line-height 1em
+
+@media $small
+  .c-404
+    width 100%
+    margin 150px auto
+    text-align center
+    &__left
+      width 100%
+      max-width 272px
+      margin 0 auto
+      float none
+    &__right
+      display none
+
+html:lang(zh-CN)
+  .c-404
+    text-align left
+    &__left
+      padding-top 35px
+    &__sorry
+      font-family $font-zh
+      font-size 30px
+      line-height 1.5em
+    h2
+      font-family $font-kh-68
+      line-height .8em
+    .c-404__text
+      font-family $font-zh
+      font-size 14px
+      line-height 1.5em
+  @media $small
+    .c-404  
+      &__left
+        max-width 295px
+        padding-top 0 
+      h2
+        line-height .8em
+

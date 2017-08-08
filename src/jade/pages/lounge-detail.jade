@@ -1,0 +1,27 @@
+extends ../_partials/_template
+
+include ../_mixins/_detail-header
+
+include ../_mixins/_nav
+
+include ../_mixins/_detail-page
+
+block content
+  
+  .c-content
+    
+    //+nav-desktop('lounge')
+    //+nav-mobile
+
+    +detail-header('playboy lounge', 'text')
+
+    .c-content__right
+      +detail-lounge-intro
+
+      +detail-lounge-food
+
+      +detail-lounge-bunnies
+
+      +detail-info
+
+

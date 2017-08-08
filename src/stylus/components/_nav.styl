@@ -1,0 +1,446 @@
+.c-nav
+  &--desktop
+    width 112px
+    position fixed
+    top 0
+    left 0px
+    z-index 99
+    padding-left 13px
+    transition background-color 1s, width 0s
+    box-sizing initial
+    &.is-active
+      height 100%
+      background-color white
+  &__logo
+    width 90%
+    a
+      position relative
+      width 100%
+      height 80px
+      display block
+      margin-top 20px
+      span
+        font-size 100px
+        text-align center
+        color black
+        margin-left -10px
+        position absolute
+        top -10px
+        left -15px
+      img
+        display block
+        width 100%
+  &__block
+    text-align left
+    line-height 2.5em
+  ul
+    margin-top 1em
+    li
+      .top-line
+        clearfix()
+        hr
+          width 10px
+          border 1px solid black
+          float left
+      a
+        font-family $font-kh-27
+        font-size 22px
+        line-height 1.5em
+        text-transform uppercase
+        text-decoration none
+        color black
+      a:hover
+        color $col-gold
+        text-decoration underline 
+      &.active
+        a
+          background-color $col-gold
+          color white
+          padding 0 2px
+        a:hover
+          text-decoration none
+  &__buttons
+    width 100%
+    margin-top 0px
+    .c-nav__language,
+    .c-nav__btn-audio
+      width 40px
+      height 40px
+      margin 10px 0
+      cursor pointer
+      border-radius 50%
+      background-color black
+    .c-nav__language
+      display block
+    .c-nav__btn-audio.play
+      background-color $col-gold
+      &:hover
+        animation initial
+  &__share
+    height 40px
+    margin 10px 0
+    a
+      position relative
+      display inline-block
+      width 40px
+      height 40px
+      background-color black
+      cursor pointer
+      border-radius 50%
+      transition background-color .8s
+      span
+        position absolute
+        width 100%
+        top 11px
+        left 0
+        font-size 19px
+        color white
+        text-align center
+        transition color .8s
+      &:hover
+        background-color $col-gold
+        text-decoration none
+        span
+          color black
+    a:nth-child(odd)
+      margin-right 5px
+    a.c-nav__share-weibo,
+    a.c-nav__share-wechat
+      display none
+    a.c-nav__share-wechat
+      background-image url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAjCAYAAADizJiTAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCNDUwN0I3M0FBRkQxMUU2OTgzMTk3OUE1MjgwOUYxQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCNDUwN0I3NEFBRkQxMUU2OTgzMTk3OUE1MjgwOUYxQiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkI0NTA3QjcxQUFGRDExRTY5ODMxOTc5QTUyODA5RjFCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkI0NTA3QjcyQUFGRDExRTY5ODMxOTc5QTUyODA5RjFCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Vnt44gAAAxRJREFUeNrM2E+oTVEUx/Hr9RKSJDGQJCkkJUXJlEQMlBAjI5SBCJmYiIHBSyaKRBQlMlBKQil/ksTAvwj5m//5///6/sq6rbff2cc99+xze5+J5+3z1ln37L3XXud21Jq0BMdxD+/x5Z9PeIJz2IhBqLXbaJzCT9Sb9Ae3MA+VJ9iJY9BNYwn9gj5A3jW3MRaVJDkRmtrwpo+wEzPQAf83SmYTruE3wg+0AkmTVBI/4G90GePQbIyB2I8w4S1IkuQYfIcF1s8L0Gq8UdAm88muQulEn8MCaiePhI3NwlT8L4b+ZiH6Qf/XEtGMWFw95VJrdhssmDaID3YJNnYAsRiLYBtLH9TKlJLV+rYYN9Fyol9hgVbDfj8Afuq0fmMxrsNfuwE2NgLaVDY2HYWTXA4L8ALhuK+hbxGLcwI+0bnw44dhY2dRONHzsACbEY4vw0s8hqpCLM5gXMU77EY4Pgx+DxROVElYAN2syoNEM2L3sg1XeH3mrb+yx/Be6Fj1tVU/f8ZdaAZ0XW4gK/BKOGWCKmn3US/gDqIbTevFjrpUfcJp1Es4gh6BH8AuKNtA6Ph8inoCaif7ohH8EGxwF8ok6gt7CjfQCD4JNvARrSa5D1k30xEaW6s6ybRMfDUI6dTMfBLbUTTJ4cjqS1X67Bj1J5O5AI1PQCxRHTiNUqYd6svGNKR4moo1B2uRNa4ZnAx/amXZisbNjsIGVKqK9KDPUK+Qyla3G+oX/pEvRTOJhs12aj2OXJUDnSD+otkYgvD1w8t7b0pBD6IzfDLjcRD2NBfjJJSMattFXMFDKIiaZf3bB1X1CJrdaHC9s/dHrRdQVcqcTu1En+QHVNW0NOMMMp+oTitNuaZ0B9bADof5UN1TS6g1rf7zFVaiiiRteUVf9PRuX6Se+gY8JX2NlPt+n7fLYw2JCnjKJN+gW2OSig4J/6JYtnZGpzxVR1+21VPrORRt2ald+IaiSb5G28uKuv310Ld6saRVr3WQ2OmmRqaSdVmEjmLV6JlQqdMXHDY2BdaXrkOtN9MMqBztQTj2V4ABAJxGPV/QqNr8AAAAAElFTkSuQmCC")
+      background-repeat no-repeat
+      background-size 24px
+      background-position 50%
+      &:hover
+        background-image url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAjCAYAAADizJiTAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpENENEM0Y3OUFENjIxMUU2ODc0MkYyQ0Q5OUUxRjM2MCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpENENEM0Y3QUFENjIxMUU2ODc0MkYyQ0Q5OUUxRjM2MCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQ0Q0QzRjc3QUQ2MjExRTY4NzQyRjJDRDk5RTFGMzYwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQ0Q0QzRjc4QUQ2MjExRTY4NzQyRjJDRDk5RTFGMzYwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+WU1LJwAAA19JREFUeNrMWEtrE1EUzqtJmzZJkzav5tU8Cklt82jSdCGK4KK4EDeKf6CC6EJ3Ci5E3boUunCpKII7N0JdKKgLoRixqFVUEIkEQfGRGJS0fgcy4WY6mcmYOzEXDsnMmZz7zT33nO+7Mei6HNls9vzs7GzZaDRu4XJbbNPT09+LxeKtkZERr67fw+125xKJxBcpYHJmsVgac3NzpzQHaDAYrJjoo1qAYjObzVter7eoCchAILCv08SFQuEJVvioXq+3sL8hMEtLS7fHx8d/S/0un89f4QqSQIgn8fl8v/x+/+5uYyDt7lwutymOg/17lwtIj8eTFwefn58/86/xJicn0xIZWeWBtS2oy+XaJThSqdRKLBY7qBRgYmIilclkzg4NDdnpmrYIZYSN29OeRVrudQoWCoWqzF7blGlf59gYaFMeASx7f3h4uMFlNZGeq8JNVK1TojgkBzLQVkgorhuCz+l0JllfPB4/rBrhwsLCZQUgXQFFO/vEPofrE6w/nU6/Z8jhm2qg4XD4J1OZd8R+VPBFwT8zM3OkUxyr1erDlqnTc4uLi8/EfrvdHuvmhbtKOybza8wlrblMJpOjl2rXhIaxvV4QrUqRAQBvwf+cnvsvQJPJ5DFQsSrKJdByhcYVKOkETPa1F42AwvsgC7RXAUH02auQEYzkJMzGto13TEN/ypPdejWbzfanFTkYDO7nkX4UxCupyYhC5faq0jZpsubOlUAPfKAWJHpkXGayHTQq2NTUVI38+NyjUGSOVoWyjmg0eojHapJB0JzEy1/r5AfhLLOsJWWg4zWWAtsUvRoNyntvSrWtttmaN1oPQBFdGgSgO2qH2oGYQZC646Ojo0Hx8aPfQE3sbI1G4wfMiJV8UyqVEnQPuvJ0tVpdba44NePXqOL7tVptYxsD+iC5vr6u+YFTr7BKAzMMHaTf8iCBRFd5aZRyRCKRtUqlQupeh9byuFwuh/H1AsjhIVqZDUrH4nA4GnQ8xlHlM+wtntFMItbr9b2yxaGmn7ICnKfR30iy53uFKtdUkIjEiY17ipokwQ0ke2TXRNHzADk2NhbpS6WiCB9xYaG+9D6ofci0m/SvnpJI1nxfqhlExdSj0eJWSAfjBVxMSzzAaNDrukEelAFqRzhpbIh9fwUYAOoocsjrBPSUAAAAAElFTkSuQmCC")
+    a.c-nav__share-weibo
+      span
+        font-size 22px
+        top 8px
+  &__language
+    transition background-color .8s
+    a
+      font-family $font-kh-68
+      color white
+      font-size 22px
+      line-height 40px
+      text-align center
+      display block
+      text-decoration none
+      transition color .8s
+    &:hover
+      background-color $col-gold
+      a
+        color black
+        text-decoration none
+    .show-on-zh
+      display none
+  &--mobile
+    display none
+    position fixed
+    right 10px
+    top 0
+    width 50px
+    z-index 200
+    &.is-active
+      & + .c-nav__menu
+        display none
+        height 100%
+        overflow auto
+  &__btn-open
+    height 50px
+    width 50px
+    background-color $col-gold
+    margin-top 0px
+    position absolute
+    top 12px
+    span
+      position absolute
+      font-size 30px
+      top 9px
+      left 0
+      width 100%
+      color black
+      text-align center
+  &__btn-audio
+    height 40px
+    width 40px
+    background-color black
+    margin-top 80px
+    border-radius 50%
+    position relative
+    transition background-color .8s
+    span
+      position absolute
+      font-size 36px
+      top 1.6px
+      left -10.4px
+      width 100%
+      color white
+      text-align center
+    &:hover
+      background-color $col-gold
+    &.play
+      background-color $col-gold
+      animation rotate 3s infinite linear
+      span 
+        color black
+  &__btn-close
+    position absolute
+    right 10px
+    width 50px
+    height 50px
+    background black
+    top 12px
+    span
+      position absolute
+      font-size 22px
+      top 13px
+      left 0
+      width 100%
+      color white
+      text-align center
+  &__menu
+    position fixed
+    z-index 300
+    display none
+    height 0
+    top 0
+    left 0
+    width 100%
+    background-color $col-gold
+    opacity .99
+    &-logo
+      width 100%
+      padding-bottom 40px
+      a
+        display block
+        width 125px
+        height 80px
+        position relative
+        overflow hidden
+        span
+          font-size 90px
+          text-align center
+          color black
+          margin-left 15px
+          position absolute
+          top -10px
+          left -15px
+        img
+          width 108px
+          margin 10px 0 0 10px
+      img
+        width 100%
+        display block
+    ul
+      width 100%
+      padding 0 10px
+      box-sizing border-box !important
+      li
+        border-top 1px black solid
+      li:last-child
+        border-bottom 1px black solid
+      a
+        font-family $font-kh-27
+        font-size 26px
+        line-height 1.7em
+        text-decoration none
+        text-transform uppercase
+        color black
+        letter-spacing .7px
+        display inline-block
+        min-width 70%
+        &:hover
+          text-decoration none
+          color black
+    .c-nav__qrcode
+      width calc(100% - 20px)
+      margin 0 auto
+      border-top 1px solid black
+      img
+        width 30%
+        max-width 120px
+        display block
+        margin 15px auto 10px
+      
+  &__qrcode
+    width 80%
+    img
+      width 100%
+      display block
+    p
+      line-height 1.5em
+      display block
+      text-transform uppercase
+      font-family $font-kh-27
+      color black
+      text-align center
+      font-size 24px
+  
+  &__contact
+    margin-top 20px
+    .c-nav__telephone,
+    .c-nav__email
+      clearfix()
+      font-family $font-kh-27
+      font-size 22px
+      line-height 1em
+      span
+        display block
+        width 20px
+        float left
+      p
+        font-size 88%
+        width calc(100% - 28px)
+        display block
+        float left
+        padding-left 8px
+        text-transform uppercase
+        word-break break-word
+        font-family $font-kh-27 !important
+    .icon-phone,
+    .icon-mail
+      &:before
+        font-size 18px
+    .c-nav__telephone
+      margin-bottom 5px
+      
+@media $small
+  .c-nav
+    &--desktop
+      width 100%
+      padding 0
+      background-color transparent
+      z-index 200
+      &.is-active
+        background-color $col-gold
+        height auto
+    &__logo
+      width 100%
+      a
+        margin-top 0
+        height 75px
+        width 135px
+        span
+          font-size 90px
+          margin-left 15px
+        img
+          width 108px
+          margin 10px 0 0 10px
+          
+    &__block
+      display none
+    &--mobile
+      display block
+      .c-nav__btn-audio
+        transition opacity 1s
+        margin-top 85px
+        width 50px
+        height 50px
+        span
+          font-size 42px
+          top 3.6px
+          left -10.7px
+      .c-nav__btn-audio.is-active
+        position relative 
+        z-index -1
+        opacity 0
+      &.is-active + .c-nav__menu
+        display block
+    &__buttons
+      width auto
+      display inline-block
+      margin 0px auto
+      padding 0
+      .c-nav__share
+        height 50px
+        display inline-block
+        float left
+        a
+          width 50px
+          height 50px
+          margin-right 40px
+          span
+            top 13px
+            font-size 22px
+          &:hover
+            background-color black
+            span
+              color white
+      .c-nav__language
+        display inline-block
+        width 50px
+        float left
+        height 50px
+        background-color black
+        cursor pointer
+        border-radius 50%
+        a
+          font-family $font-kh-68
+          color white
+          font-size 24px
+          line-height 50px
+          text-align center
+          display block
+          text-decoration none
+          text-transform uppercase
+        .show-on-zh
+          display none
+    &__qrcode
+      p
+        font-size 42px
+        line-height 1em
+
+@keyframes rotate
+  0%
+    transform rotate(0deg)
+  25%
+    transform rotate(90deg)
+  50%
+    transform rotate(180deg)
+  75%
+    transform rotate(270deg)
+  100%
+    transform rotate(360deg)
+
+
+html:lang(zh-CN)
+  .c-nav
+    ul
+      li
+        a
+          font-family $font-zh
+          font-size 15px
+        &.active
+          a
+            padding 3px 2px
+    &__share
+      &-instagram
+        display none
+      &-facebook
+        display none
+      &-weibo
+        display inline-block
+      &-wechat
+        display inline-block
+    &__language
+      .show-on-zh
+        display block
+      .show-on-en
+        display none    
+    &__menu
+      ul
+        a
+          font-family $font-zh
+          font-size 18px
+          line-height 2em
+@media $small
+  html:lang(zh-CN)
+    .c-nav__qrcode
+      p
+        font-size 24px
+        line-height 2em
+        font-family $font-zh
+    

@@ -1,0 +1,158 @@
+include _nav
+
+mixin slider(nav)
+  .c-slider.c-slider--homepage
+    .owl-carousel.owl-theme(data-js-owlcarousel-auto)
+      each i in [0, 1, 2, 3]
+        a(href="/").c-slider__item
+          img.c-slider__item-desktop(src=bannerImageDesktop_1400x1040[i] alt=bannerImageDesktopAlt[i])
+          img.c-slider__item-mobile(src=bannerImageMobile_640x1110[i] alt=bannerImageMobileAlt[i])
+    if nav == 'nav'
+      //+nav-desktop
+      //+nav-mobile
+
+    .c-slider__link
+      a(href="/")
+        img(src=bannerImageLink_140x200 alt=bannerImageLinkAlt)
+
+mixin about-us
+  .c-content__right
+    .c-about(data-js-scroll-load)
+      .c-about__text
+        .top-line
+          hr
+        h2= aboutTitle
+        .top-line
+          hr
+        p= aboutName
+      .c-about__fl-img
+        img(src=aboutImage_490x365 alt=aboutImageAlt)
+      .c-about__fl-text
+        .top-line
+          hr
+        p= aboutText
+
+mixin lounge
+  .c-content__right
+    .c-lounge
+      .c-lounge__imgs(data-js-scroll-load)
+        each i in [1, 2, 3, 4]
+          div(class='c-lounge__img--'+i)
+            img(src=loungeImage_350x449[i-1] alt=loungeImageAlt[i-1])
+            .bg--shadow
+      .c-lounge__img-mobile
+        img(src=loungeImageMobile_490x150 alt=loungeImageMobileAlt)
+      .c-lounge__text
+        .top-line
+          hr
+        h2= loungeTitle
+        .top-line
+          hr
+        h3= loungeSmallTitle
+        .top-line.top-line--gold
+          hr
+        p= loungetext
+        a.button--learn-more(href="")!= learnMore
+      .c-lounge__img-mobile.clearfix
+        each i in [1, 2, 3]
+          .c-lounge__img-mobile-small
+            img(src=loungeImageSmall_158x174[i-1] alt=loungeImageSmallAlt[i-1])
+
+mixin club-rooms
+  .c-content__right
+    .c-clubrooms(data-js-scroll-load)
+      .c-clubrooms__fl
+        .top-line
+          hr
+        h2= clubRoomsTitle
+        .top-line
+          hr
+        h3= clubRoomsSmallTitle
+      .owl-carousel(data-js-owlcarousel)
+        each i in [1, 2, 3]
+          .c-clubrooms__block
+            .c-clubrooms__img
+              img(src=clubroomsImage_1400x800[i-1] alt=clubroomsImageAlt[i-1])
+            .c-clubrooms__item
+              .c-clubrooms__text
+                h3= clubRoomsBar[i-1]
+                .top-line
+                  hr
+                p= clubRoomsText[i-1]
+                a.button--learn-more(href="")!= learnMore
+
+mixin events
+  .c-content__right
+    .c-events
+      .c-events__text
+        .top-line
+          hr
+        h2= eventsTitle
+        .top-line
+          hr
+        h3= eventsSmallTitle 
+        a.button--learn-more(href="")!= learnMore
+      .c-events__blocks.clearfix(data-js-scroll-load)
+        - var i = 0;
+        while i++ <= 2
+          a.c-events__block(href="/" class="c-events__block--#{i}")
+            img(src=eventsImage_340x610[i-1] alt=eventsImageAlt[i-1])
+            .bg--shadow
+      .c-events__mobile
+        .owl-carousel(data-js-owlcarousel)
+          each i in [1, 2, 3]
+            a(href="/").c-events__block
+              img(src=eventsImage_340x610[i-1] alt=eventsImageAlt[i-1])
+              .bg--shadow
+
+mixin gallery
+  .c-content__right
+    .c-gallery
+      .c-gallery__big-mobile
+        .top-line
+          hr
+        h2= galleryTitle
+        .top-line
+          hr
+        h3= gallerySmallTitle 
+        a.button--learn-more(href="")!= learnMore
+      .clearfix
+        a(href="/").c-gallery__rectangle
+          .img-background(style="background-image: url('./assets/img/homepage-gallery-hover-01.jpg')")
+          .c-shadow__text
+            span= galleryDate[2]
+            .top-line
+              hr
+            p= galleryName[2]
+          .bg--shadow
+          .bg--shadow__text
+        
+        .c-gallery__big
+          .top-line
+            hr
+          h2= galleryTitle
+          .top-line
+            hr
+          h3= gallerySmallTitle
+          a.button--learn-more(href="")!= learnMore
+        .c-gallery__small
+          a(href="/").c-gallery__small-square
+            .img-background(style="background-image: url('./assets/img/homepage-gallery-hover-01.jpg')")
+            .c-shadow__text
+              span= galleryDate[0]
+              .top-line
+                hr
+              p= galleryName[0]
+            .bg--shadow
+            .bg--shadow__text
+          a(href="/").c-gallery__small-square
+            .img-background(style="background-image: url('./assets/img/homepage-gallery-hover-01.jpg')")
+            .c-shadow__text
+              span= galleryDate[1]
+              .top-line
+                hr
+              p= galleryName[1]
+            .bg--shadow
+            .bg--shadow__text
+
+

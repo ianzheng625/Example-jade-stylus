@@ -1,0 +1,22 @@
+extends ../_partials/_template
+
+include ../_mixins/_nav
+
+
+block content
+  
+  .c-content
+    
+    //+nav-desktop('gallery')
+    //+nav-mobile
+
+    .c-content__right
+      .c-404
+        .c-404__left
+          p.c-404__sorry oops!
+          h2 404
+          .c-404__text file not found
+        .c-404__right
+          img(src=paths.img + "404.png")
+
+

@@ -1,0 +1,307 @@
+.c-news
+  max-width 1024px
+  margin 75px auto 0
+  overflow hidden
+  &__content
+    display block
+    width 90%
+    margin 0 auto
+    &:first-child
+      .c-news__detail:first-child
+        .c-news__timeline
+          top 40px
+          height calc(100% - 40px)
+        .c-news__timepoint
+          top 0
+    &:last-child
+      .c-news__detail:last-child
+        .c-news__timeline
+          height 40px
+          
+  &__detail
+    clearfix
+    position relative
+    padding-left 50px
+    padding-bottom 75px
+    &--title
+      text-align left
+      text-transform uppercase
+      width 55%
+      color black
+      margin-bottom 20px
+      p
+        color black
+        font-family $font-kh-68
+        font-size 30px
+        line-height .8em
+        max-width 50%
+        margin-bottom 0
+      h2
+        color black
+        font-size 120px
+        line-height 1em
+        margin-top 0
+        margin-bottom 0
+      .top-line
+        display none
+      &.c-news__detail
+        &--date
+          h2
+            font-family $font-kh-26
+        &--year
+          h2
+            font-family $font-kh-68
+        &--yearspan 
+          h2
+            font-family $font-kh-27
+    &--img
+      overflow hidden
+      img 
+        display block 
+        width 100%
+      .bg--shadow
+        z-index 2
+      &:hover
+        .bg--shadow
+          opacity 0
+          z-index -1
+        img
+          transform scale(1.1,1.1)
+      img,
+      .bg--shadow
+        transition top 1s ease, opacity 1s ease, z-index 1s ease, transform ease 1s  
+      .c-news__show--mobile
+        display none
+    &--text
+      background-color black
+      padding 30px 0
+      .top-line
+        clearfix()
+        hr
+          width 20px
+          border 1px solid $col-gold
+          margin 0px auto 20px
+      p
+        font-size 16px
+        text-align left
+        color white
+        line-height 2em
+        padding 0 65px
+        margin-bottom 0
+        a
+          color white
+          display inline
+          margin-left 5px
+          text-decoration underline
+    
+    &--img--right
+      clearfix()
+      .c-news__detail
+        &--img
+          width auto
+          position absolute
+          top 0
+          left 50%
+          z-index 2
+          max-height 300px
+          img
+            height 300px
+            width auto
+        &--text
+          width 50%
+          float left
+          margin-left 30px
+          
+    &--img--left
+      clearfix()
+      .c-news__detail
+        &--img
+          width auto
+          float right
+          position relative
+          z-index 2
+          max-height 300px
+          max-width 55%
+          margin-right calc(50% - 30px)
+          img
+            height 300px
+            width auto
+            float right
+        &--text
+          width calc(50% - 30px)
+          position absolute
+          top 50px
+          left 50%
+          z-index 1
+  &__timeline
+    position absolute
+    left 4px
+    height 100%
+    top 0
+    width 0
+    border-left 2px black solid
+  &__timepoint
+    position absolute
+    left -6px
+    width 10px
+    height 10px
+    border-radius 50%
+    background-color black
+    top 40px
+  
+    
+
+@media $medium
+  .c-news
+    &__content
+      width 100%
+    &__detail
+      &--title
+        p
+          max-width 80%
+        h2
+          font-size 80px
+      &--text
+        p
+          line-height 1.5em
+          padding 0 40px
+      &--img--right
+        .c-news__detail
+          &--text
+            margin-left 15px
+          &--img
+            max-height 200px
+            img
+              height 200px
+      &--img--left
+        .c-news__detail
+          &--img
+            margin-left 15px
+            max-height 200px
+            margin-right calc(50% - 15px)
+
+            img
+              height 200px
+            
+
+@media $small
+  .c-news
+    margin-top 30px
+    &__content
+      width 100%
+    &__detail
+      padding-left 0
+      padding-bottom 20px
+      &--title
+        width 100%
+        text-align center
+        .top-line
+          clearfix()
+          display block
+          hr
+            width 20px
+            border-color black
+            margin 15px auto
+        h2
+          font-size 60px
+        p
+          max-width 80%
+          margin 0 auto
+        &.c-news__detail
+          &--date
+            h2
+              font-family $font-kh-68
+          &--year
+            h2
+              font-family $font-kh-68
+          &--yearspan 
+            h2
+              font-family $font-kh-68
+      &--img--right
+        .c-news__detail
+          &--img
+            width 100%
+            position static
+            max-height none
+            img
+              width 100%
+              height auto
+          &--text
+            width 90%
+            float none
+            margin 0 auto
+            position relative
+            top -20px  
+      &--img--left
+        clearfix()
+        .c-news__detail
+          &--img
+            width 100%
+            float none
+            margin-left 0px
+            position static
+            max-height none
+            max-width none
+            img
+              width 100%
+              height auto
+          &--text
+            width 90%
+            position relative
+            top -20px
+            left 0
+            margin 0 auto
+      &--img
+        .c-news
+          &__show--desktop
+            display none
+          &__show--mobile
+            display block
+        &--square
+          img
+            width 100%
+        .bg--shadow
+          display none
+      &--text
+        .top-line
+          hr
+            margin-bottom 15px
+        p
+          text-align center
+          line-height 1.5em
+          padding 0 25px
+
+    &__timeline
+      display none
+    &__timepoint
+      display none
+    
+html:lang(zh-CN)
+  .c-news
+    &__detail
+      &--title
+        p
+          font-weight bold
+          font-family $font-zh
+          font-size 24px
+          line-height 1em
+
+@media $medium
+  html:lang(zh-CN)
+    .c-news
+      &__detail
+        &--title
+          p
+            font-size 20px
+@media $small
+  html:lang(zh-CN)
+    .c-news
+      &__detail
+        &--title
+          p
+            font-size 20px
+
+
+
+
+
